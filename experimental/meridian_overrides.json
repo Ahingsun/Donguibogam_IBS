@@ -1,0 +1,9 @@
+{
+  "_comment": "Meridian tropism (歸經) per herb, sourced from the KIOM OASIS Herbal Medicine Resource Monographs (I-VII) / Bonchohak, per the manuscript. Fill as {\"木香\": [\"脾\",\"胃\",\"大腸\"], ...}. Herbs absent here fall back to any 歸經 parsed from the Donguibogam Tangaek text (usually empty).",
+  "木香": ["脾","胃","大腸"],
+  "白朮": ["脾","胃"],
+  "芍藥": ["肝","脾"],
+  "厚朴": ["脾","胃","大腸"],
+  "黃連": ["心","肝","胃","大腸"],
+  "肉豆蔲": ["脾","胃","大腸"]
+}
