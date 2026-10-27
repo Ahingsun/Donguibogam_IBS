@@ -5,7 +5,9 @@
 
 build refuses to overwrite existing materials (they may already be with the raters); use --force
 only before anything has been sent out. analyze writes the key and the answers without the passages to
-d2/rating_key.csv and d2/ratings.csv, and reads those when the workbooks are absent.
+d2/rating_key.csv and d2/ratings.csv, and reads those when the workbooks are absent. The first author's labels for
+the units on which the raters disagreed (d2/불일치_저자판정.xlsx, column author_label of ratings.csv) give the
+secondary estimates in d2_summary.json["with_author_labels"]; the primary estimates use the units the raters agreed on.
 """
 import csv
 import json
@@ -115,14 +117,13 @@ def analyze():
     if workbooks:
         ra = d2.read_rater(os.path.join(folder, fa))
         rb = d2.read_rater(os.path.join(folder, fb))
-        third_p = d2.third_rater_return(folder)      # tools/make_third_rater_file.py
-        rc = d2.read_rater(third_p) if third_p else None
+        ap = os.path.join(folder, d2.AUTHOR_LABELS)
+        rc = d2.read_rater(ap) if os.path.exists(ap) else None
         d2.write_key_csv(key, folder)
-        d2.write_ratings(items, [ra, rb] + ([rc] if rc else []), folder)
+        d2.write_ratings(items, [ra, rb], folder, author=rc)
     else:
         ratings = d2.read_ratings(folder)
-        ra, rb, rc = ratings["rater_1"], ratings["rater_2"], ratings.get("rater_3")
-        third_p = d2.RATINGS_CSV if rc else None
+        ra, rb, rc = ratings["rater_1"], ratings["rater_2"], ratings.get(d2.AUTHOR_COL)
     for fname, r in ((fa, ra), (fb, rb)):
         if set(r) != expected:
             raise SystemExit(f"{fname}: its rows are not the rows of the current design "
@@ -134,11 +135,9 @@ def analyze():
         for r in list(load_workbook(adj_p, read_only=True)["조정"].iter_rows(values_only=True))[1:]:
             if r and r[0] and r[-1] in ("포함", "제외"):
                 adj[r[0]] = r[-1]
-    if rc:          # the third rater's answer decides a split vote (majority of three)
-        by_rid = {rid: uid for rid, uid, *_ in items}
-        adj = {by_rid[rid]: v for rid, v in ((rid, d2.judgement(row)) for rid, row in rc.items())
-               if rid in by_rid and v in ("포함", "제외")}
-        print(f"third rater: {len(adj)} answers from {os.path.basename(third_p)}")
+    by_rid = {rid: uid for rid, uid, *_ in items}
+    labels = {by_rid[rid]: v for rid, v in ((rid, d2.judgement(row)) for rid, row in (rc or {}).items())
+              if rid in by_rid and v in ("포함", "제외")}
     S = screen(U, cfg)
     cand = [r["unit_id"] for r in S if r["candidate"] and not r["excluded_by_filter"]]
     dec, n_prov = current_decisions(cfg, cand, byid)
@@ -148,6 +147,8 @@ def analyze():
     summ["blank_ratings"] = {f: sorted(i for i in expected if d2.judgement(r.get(i)) not in ("포함", "제외"))
                              for f, r in ((fa, ra), (fb, rb))}
     summ.update(d2.analyze_more(per, post_rating_rule_units(cfg, byid), cfg["d2"]["seed"], cfg["d2"]["bootstrap"]))
+    if labels:
+        summ["with_author_labels"] = d2.with_author_labels(per, labels, cfg["d2"]["seed"], cfg["d2"]["bootstrap"])
     # what the consensus misses are, for the text: the author's exclusion reason at adjudication, and the kind of
     # entry below the screening threshold (formula or single-herb entry vs body text)
     codes = {u: d.get("제외코드", "") for u, d in load_decisions(cfg)[0].items()}
@@ -175,6 +176,9 @@ def analyze():
         print(f"{len(dis)} disagreements written to {adj_p} for adjudication")
     with open(os.path.join(folder, "d2_summary.json"), "w", encoding="utf-8") as f:
         json.dump(summ, f, ensure_ascii=False, indent=1)
+    if labels:
+        for x in per:
+            x[d2.AUTHOR_COL] = "" if x["reference"] else labels.get(x["unit_id"], "")
     with open(os.path.join(folder, "d2_per_unit.csv"), "w", encoding="utf-8-sig", newline="") as f:
         if per:
             w = csv.DictWriter(f, fieldnames=list(per[0].keys()))

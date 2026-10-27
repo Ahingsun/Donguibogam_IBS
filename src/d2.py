@@ -12,8 +12,10 @@ Strata are fixed when the sample is drawn. Metrics use the known inclusion proba
 stay valid if the author's decisions change afterwards; passages the author newly includes later
 are rated in an addendum so that every included passage has an expert label.
 
-Reference label: agreement of the two raters; disagreements go to an adjudicator (third rater or
-consensus meeting).
+Reference label: agreement of the two raters. For the units on which they disagreed, the first author assigned a
+label after reviewing both ratings (researcher decision 2026-10-27, instead of a third rater; d2/불일치_저자판정.xlsx).
+These labels are not independent of the decisions under evaluation, so they enter a secondary analysis only
+(with_author_labels); the primary estimates use the units on which the raters agreed.
 
 Rating unit (second version of the rater workbooks, 2026-10-09): the unit the author adjudicates. A sampled body
 passage with two or more source citations is rated unit by unit (src/statements.py), every other passage whole.
@@ -40,20 +42,12 @@ Q_COLS = ["Q1_주된내용_배변관련", "Q2a_배변연관통증", "Q2b_빈도�
           "Q3_제외맥락", "Q4_종합판단", "Q4_확신도", "Q5_배변양상", "메모"]
 STRATA = ["A", "B", "C", "D2", "D1", "E", "F"]
 THIRD_OUT = "동의보감_IBS조문_제3검토위원.xlsx"          # tools/make_third_rater_file.py writes it to major_revision/
-THIRD_RETURN = "동의보감_IBS조문_제3검토위원_완료.xlsx"
+AUTHOR_LABELS = "불일치_저자판정.xlsx"   # that workbook, filled in by the first author (2026-10-27)
 KEY_FILE = "평정키_연구자보관.xlsx"
 KEY_CSV = "rating_key.csv"            # the key without the workbook
 RATINGS_CSV = "ratings.csv"           # include/exclude answers by rating id, without the passages
-RATER_COLS = ("rater_1", "rater_2", "rater_3")
-
-
-def third_rater_return(folder):
-    """The third rater's returned workbook, saved in d2/ or next to the file that was sent (major_revision/), or None."""
-    for p in (os.path.join(folder, THIRD_RETURN),
-              os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(folder))), THIRD_RETURN)):
-        if os.path.exists(p):
-            return p
-    return None
+RATER_COLS = ("rater_1", "rater_2")
+AUTHOR_COL = "author_label"           # the first author's label for the units on which the raters disagreed
 
 
 def build_frame(screen_rows, units_by_id, decisions, final_sections):
@@ -225,20 +219,24 @@ def write_key_csv(key, folder):
         w.writerows([rid, uid, s, "" if p is None else repr(p)] for rid, uid, s, p in key)
 
 
-def write_ratings(items, raters, folder):
-    """ratings.csv: the include/exclude answer of each rater for every rated unit (blank: no answer)."""
+def write_ratings(items, raters, folder, author=None):
+    """ratings.csv: the include/exclude answer of each rater for every rated unit (blank: no answer), and the first
+    author's label for the units on which the raters disagreed when author holds them."""
+    cols = list(RATER_COLS[:len(raters)]) + ([AUTHOR_COL] if author else [])
     with open(os.path.join(folder, RATINGS_CSV), "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["rating_id", *RATER_COLS[:len(raters)]])
-        w.writerows([rid] + [judgement(r.get(rid)) or "" for r in raters]
+        w.writerow(["rating_id", *cols])
+        w.writerows([rid] + [judgement(r.get(rid)) or "" for r in raters + ([author] if author else [])]
                     for rid, _, _, s, _ in items if s != "calibration")
 
 
 def read_ratings(folder):
-    """{rater column: {rating id: row}} from ratings.csv, rows shaped like read_rater's."""
+    """{column: {rating id: row}} from ratings.csv for the raters and the author's labels, rows shaped like
+    read_rater's."""
     with open(os.path.join(folder, RATINGS_CSV), encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f))
-    return {c: {r["rating_id"]: {JUDGEMENT_COLS[0]: r[c]} for r in rows} for c in RATER_COLS if rows and c in rows[0]}
+    return {c: {r["rating_id"]: {JUDGEMENT_COLS[0]: r[c]} for r in rows}
+            for c in RATER_COLS + (AUTHOR_COL,) if rows and c in rows[0]}
 
 
 def read_rater(path):
@@ -345,12 +343,12 @@ SCREENING_STRATA = {"D2": "screening (score below the threshold)", "D1": "screen
 
 
 def analyze_more(per, post_rule, seed, n_boot=2000):
-    """Analyses added after the ratings came back (2026-10-26), with no third rater: the author's decisions
-    against each rater on every unit both rated, where the stratum-weighted misses against the consensus come from
-    (screening threshold, exclusion filter or adjudication), the consensus metrics without the units whose
-    author decision rests on a rule adopted after the rating files were sent (post_rule: unit ids), and, while split
-    votes remain, the metrics with all of them counted as relevant or all as not relevant (the range a third rater
-    could produce)."""
+    """Analyses added after the ratings came back (2026-10-26): the author's decisions against each rater on every
+    unit both rated, where the stratum-weighted misses against the consensus come from (screening threshold,
+    exclusion filter or adjudication), the consensus metrics without the units whose author decision rests on a rule
+    adopted after the rating files were sent (post_rule: unit ids), and, while split votes remain, the metrics with
+    all of them counted as relevant or all as not relevant. These two scenarios are not bounds: a mixed assignment can
+    give a recall outside them."""
     rng = np.random.default_rng(seed + 1)
     out = {}
     for who in ("rater_a", "rater_b"):
@@ -373,6 +371,16 @@ def analyze_more(per, post_rule, seed, n_boot=2000):
             k: dict(precision=round(_precision(rows), 3), recall=round(_recall(rows), 3))
             for k, rows in (("all_relevant", [dict(x, reference=x["reference"] or "포함") for x in per]),
                             ("none_relevant", [dict(x, reference=x["reference"] or "제외") for x in per]))}
+    return out
+
+
+def with_author_labels(per, labels, seed, n_boot=2000):
+    """Secondary analysis: the reference completed with the first author's labels (unit id -> 포함/제외) for the units
+    on which the raters disagreed. The labels are not independent of the decisions under evaluation."""
+    split = [x for x in per if not x["reference"] and labels.get(x["unit_id"]) in ("포함", "제외")]
+    rows = [dict(x, reference=x["reference"] or labels.get(x["unit_id"], "")) for x in per]
+    out = _scores([x for x in rows if x["reference"]], np.random.default_rng(seed + 2), n_boot)
+    out.update(labels=len(split), labels_differing_from_decision=sum(1 for x in split if labels[x["unit_id"]] != x["author"]))
     return out
 
 

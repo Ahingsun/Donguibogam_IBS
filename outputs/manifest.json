@@ -1,6 +1,6 @@
 {
  "version": "R1-2026-10-04",
- "run_started": "2026-10-26T18:19:45",
+ "run_started": "2026-10-26T20:46:48",
  "status": "FINAL (all decisions from the adjudication record)",
  "python": "3.14.7",
  "platform": "Windows-11-10.0.26200-SP0",
@@ -80,7 +80,7 @@
   "src\\common.py": "8ec328697e2d5fcafa70d3ab3c067c68",
   "src\\composition.py": "6aaa7d55f9154b8c8777acb86f18b58d",
   "src\\corpus.py": "9207ac1f0e6a2846d2eb0dce139891f3",
-  "src\\d2.py": "e355f231083cbaf05f5ffaa7c56ba50c",
+  "src\\d2.py": "fff5737aa9e9dcea7340648cc11a2f68",
   "src\\features.py": "4491d56ce0296971537e75cdf944baea",
   "src\\figures.py": "4d3e01b58e315bddf74b421b01c5d789",
   "src\\lexicon.py": "0610a3864c3d83cfb2c2af105c1449c9",
