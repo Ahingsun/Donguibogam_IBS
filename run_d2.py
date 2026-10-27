@@ -140,9 +140,10 @@ def analyze():
               if rid in by_rid and v in ("포함", "제외")}
     S = screen(U, cfg)
     cand = [r["unit_id"] for r in S if r["candidate"] and not r["excluded_by_filter"]]
+    status = {r["unit_id"]: (bool(r["candidate"]), bool(r["candidate"]) and not r["excluded_by_filter"]) for r in S}
     dec, n_prov = current_decisions(cfg, cand, byid)
     included = {u for u, v in dec.items() if v}
-    summ, per = d2.analyze(items, ra, rb, adj, included, cfg["d2"]["seed"], cfg["d2"]["bootstrap"])
+    summ, per = d2.analyze(items, ra, rb, adj, included, cfg["d2"]["seed"], cfg["d2"]["bootstrap"], status=status)
     summ["author_decisions_provisional"] = n_prov
     summ["blank_ratings"] = {f: sorted(i for i in expected if d2.judgement(r.get(i)) not in ("포함", "제외"))
                              for f, r in ((fa, ra), (fb, rb))}
@@ -159,11 +160,11 @@ def analyze():
     miss = [x for x in per if x["reference"] == "포함" and x["author"] == "제외"]
     tally = lambda xs: dict(sorted({k: sum(1 for y in xs if y == k) for k in set(xs)}.items(), key=lambda kv: (-kv[1], kv[0])))
     summ["adjudication_miss_reasons"] = tally([reason(codes.get(x["unit_id"], "")) for x in miss
-                                               if x["stratum"] in ("A", "B")])
+                                               if x["adjudicated"] == "yes"])
     kind = lambda u: "single-herb entry" if byid[u]["CC"] == "單方" else \
         "formula entry" if byid[u]["type"] != "body" else "body text"
     summ["screening_miss_kinds"] = tally([kind(statements.parent_of(x["unit_id"])) for x in miss
-                                          if x["stratum"] in ("D2", "D1", "E")])
+                                          if x["screened"] != "yes"])
     dis = [x for x in per if x["rater_a"] != x["rater_b"] and not x["reference"]]
     if dis and workbooks and not os.path.exists(adj_p):
         wb = Workbook()

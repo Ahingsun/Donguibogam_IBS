@@ -297,20 +297,42 @@ def gwet_ac1(a, b):
     return (po - pe) / (1 - pe) if pe < 1 else float("nan")
 
 
-def _precision(rows):
-    inc = [x for x in rows if x["author"] == "포함"]
-    return sum(x["reference"] == "포함" for x in inc) / len(inc) if inc else float("nan")
+def _w(x):
+    """Horvitz–Thompson weight of a rated unit: the inverse of the inclusion probability of its passage."""
+    return 1 / x["prob"]
 
 
-def _recall(rows):
-    tp_w = sum(1 / x["prob"] for x in rows if x["author"] == "포함" and x["reference"] == "포함")
-    all_w = sum(1 / x["prob"] for x in rows if x["reference"] == "포함")
-    return tp_w / all_w if all_w else float("nan")
+INCLUDED = lambda x: x["author"] == "포함"
+# the steps of the procedure, as classifications of every unit of the clinical chapters: the keyword screen (score
+# at or above the threshold), the exclusion filter (screened and not filtered, i.e. adjudicated) and adjudication
+STEPS = (("screen", lambda x: x["screened"] == "yes"), ("filter", lambda x: x["adjudicated"] == "yes"),
+         ("final", INCLUDED))
 
 
-def _cluster_ci(rows, stat, rng, n_boot):
-    """Percentile 95% interval of stat(rows), resampling passages within strata; the units of a divided passage
-    stay together because they share the passage's sampling."""
+def _precision(rows, positive=INCLUDED):
+    """Stratum-weighted share of the units classed positive that the reference judges relevant."""
+    pos = [x for x in rows if positive(x)]
+    den = sum(_w(x) for x in pos)
+    return sum(_w(x) for x in pos if x["reference"] == "포함") / den if den else float("nan")
+
+
+def _recall(rows, positive=INCLUDED):
+    """Stratum-weighted share of the units the reference judges relevant that are classed positive."""
+    rel = [x for x in rows if x["reference"] == "포함"]
+    den = sum(_w(x) for x in rel)
+    return sum(_w(x) for x in rel if positive(x)) / den if den else float("nan")
+
+
+def _f1(p, r):
+    return 2 * p * r / (p + r) if (p + r) and not (math.isnan(p) or math.isnan(r)) else float("nan")
+
+
+def _cluster_ci(rows, stat, rng, n_boot, census_fixed=False):
+    """Percentile 95% interval of stat(rows), resampling passages with replacement within strata; the units of a
+    divided passage stay together because they share the passage's sampling. With census_fixed, a stratum sampled in
+    full (inclusion probability 1) is kept as it is, because it carries no sampling variance; this is used for
+    precision and recall, which estimate quantities of the finite set of passages. Agreement statistics resample
+    every stratum."""
     by = {}
     for x in rows:
         by.setdefault(x["stratum"], {}).setdefault(x["block"], []).append(x)
@@ -319,58 +341,56 @@ def _cluster_ci(rows, stat, rng, n_boot):
         rs = []
         for blocks in by.values():
             ids = list(blocks)
+            if census_fixed and all(x["prob"] == 1 for b in blocks.values() for x in b):
+                for i in ids:
+                    rs += blocks[i]
+                continue
             for i in rng.integers(0, len(ids), len(ids)):
                 rs += blocks[ids[i]]
         v = stat(rs)
         if not math.isnan(v):
             vals.append(v)
-    return f"{np.percentile(vals, 2.5):.3f}–{np.percentile(vals, 97.5):.3f}" if vals else ""
+    return f"{np.percentile(vals, 2.5):.6f}–{np.percentile(vals, 97.5):.6f}" if vals else ""
 
 
-def _scores(rows, rng, n_boot):
-    """Precision, stratum-weighted recall, F1 and κ of the author's decisions against x["reference"]."""
-    p, rec = _precision(rows), _recall(rows)
-    return dict(n=len(rows), n_author_included=sum(1 for x in rows if x["author"] == "포함"),
-                precision=round(p, 3), precision_ci=_cluster_ci(rows, _precision, rng, n_boot),
-                recall=round(rec, 3), recall_ci=_cluster_ci(rows, _recall, rng, n_boot),
-                f1=round(2 * p * rec / (p + rec), 3) if (p + rec) else "",
-                kappa_author=round(cohen_kappa([x["author"] for x in rows], [x["reference"] for x in rows]), 3))
-
-
-SCREENING_STRATA = {"D2": "screening (score below the threshold)", "D1": "screening (score below the threshold)",
-                    "E": "screening (score below the threshold)", "C": "exclusion filter",
-                    "A": "adjudication", "B": "adjudication"}
+def _scores(rows, rng, n_boot, positive=INCLUDED):
+    """Weighted precision and recall (census-fixed intervals) and F1 of a classification against x["reference"],
+    and the unweighted κ between the classification and the reference across the rated units."""
+    p, rec = _precision(rows, positive), _recall(rows, positive)
+    f1 = _f1(p, rec)
+    return dict(n=len(rows), n_positive=sum(1 for x in rows if positive(x)),
+                precision=round(p, 6),
+                precision_ci=_cluster_ci(rows, lambda rs: _precision(rs, positive), rng, n_boot, census_fixed=True),
+                recall=round(rec, 6),
+                recall_ci=_cluster_ci(rows, lambda rs: _recall(rs, positive), rng, n_boot, census_fixed=True),
+                f1=round(f1, 6) if not math.isnan(f1) else "",
+                kappa_rated_units=round(cohen_kappa(["포함" if positive(x) else "제외" for x in rows],
+                                                    [x["reference"] for x in rows]), 6))
 
 
 def analyze_more(per, post_rule, seed, n_boot=2000):
     """Analyses added after the ratings came back (2026-10-26): the author's decisions against each rater on every
-    unit both rated, where the stratum-weighted misses against the consensus come from (screening threshold,
-    exclusion filter or adjudication), the consensus metrics without the units whose author decision rests on a rule
-    adopted after the rating files were sent (post_rule: unit ids), and, while split votes remain, the metrics with
-    all of them counted as relevant or all as not relevant. These two scenarios are not bounds: a mixed assignment can
-    give a recall outside them."""
+    unit both rated, the step of the procedure that removed the relevant units it did not include (weighted share of
+    all relevant units: screening threshold, exclusion filter, adjudication), and the consensus metrics without the
+    units whose author decision rests on a rule adopted after the rating files were sent (post_rule: unit ids)."""
     rng = np.random.default_rng(seed + 1)
     out = {}
     for who in ("rater_a", "rater_b"):
         out[f"vs_{who}"] = _scores([dict(x, reference=x[who]) for x in per], rng, n_boot)
     done = [x for x in per if x["reference"]]
-    miss = [x for x in done if x["reference"] == "포함" and x["author"] == "제외"]
-    total = sum(1 / x["prob"] for x in done if x["reference"] == "포함")
+    rel = [x for x in done if x["reference"] == "포함"]
+    total = sum(_w(x) for x in rel)
+    step_of = lambda x: ("screening (score below the threshold)" if x["screened"] != "yes" else
+                         "exclusion filter" if x["adjudicated"] != "yes" else "adjudication")
     by = {}
-    for x in miss:
-        k = SCREENING_STRATA.get(x["stratum"], x["stratum"])
-        n, w = by.get(k, (0, 0.0))
-        by[k] = (n + 1, w + 1 / x["prob"])
-    out["consensus_misses"] = {k: dict(units=n, weighted_share_of_relevant=round(w / total, 3))
+    for x in rel:
+        if not INCLUDED(x):
+            n, w = by.get(step_of(x), (0, 0.0))
+            by[step_of(x)] = (n + 1, w + _w(x))
+    out["consensus_misses"] = {k: dict(units=n, weighted_share_of_relevant=round(w / total, 6))
                                for k, (n, w) in sorted(by.items())}
     kept = [x for x in done if x["unit_id"] not in post_rule]
-    out["consensus_without_post_rating_rules"] = dict(_scores(kept, rng, n_boot),
-                                                      units_removed=len(done) - len(kept))
-    if len(done) < len(per):
-        out["split_votes_bounds"] = {
-            k: dict(precision=round(_precision(rows), 3), recall=round(_recall(rows), 3))
-            for k, rows in (("all_relevant", [dict(x, reference=x["reference"] or "포함") for x in per]),
-                            ("none_relevant", [dict(x, reference=x["reference"] or "제외") for x in per]))}
+    out["consensus_without_post_rating_rules"] = dict(_scores(kept, rng, n_boot), units_removed=len(done) - len(kept))
     return out
 
 
@@ -379,14 +399,20 @@ def with_author_labels(per, labels, seed, n_boot=2000):
     on which the raters disagreed. The labels are not independent of the decisions under evaluation."""
     split = [x for x in per if not x["reference"] and labels.get(x["unit_id"]) in ("포함", "제외")]
     rows = [dict(x, reference=x["reference"] or labels.get(x["unit_id"], "")) for x in per]
-    out = _scores([x for x in rows if x["reference"]], np.random.default_rng(seed + 2), n_boot)
+    rng = np.random.default_rng(seed + 2)
+    done = [x for x in rows if x["reference"]]
+    out = _scores(done, rng, n_boot)
+    out["recall_screen"] = round(_recall(done, STEPS[0][1]), 6)
     out.update(labels=len(split), labels_differing_from_decision=sum(1 for x in split if labels[x["unit_id"]] != x["author"]))
     return out
 
 
-def analyze(items, ra, rb, adjudicator, author_included, seed, n_boot=2000):
+def analyze(items, ra, rb, adjudicator, author_included, seed, n_boot=2000, status=None):
     """items: rating_items(...). author_included: unit ids (passages or "<unit_id>#<k>") the author includes.
-    Returns the summary and one row per rated unit."""
+    status: {passage id: (screened, adjudicated)} from the current screening (keyword score at or above the
+    threshold; and not removed by the exclusion filter). Returns the summary and one row per rated unit.
+    Precision and recall are stratum-weighted (Horvitz–Thompson) estimates for the clinical chapters outside stratum F;
+    recall is given for each step of the procedure (screen, filter, final)."""
     per = []
     for rid, uid, block, s, p in items:
         if s == "calibration":
@@ -395,23 +421,24 @@ def analyze(items, ra, rb, adjudicator, author_included, seed, n_boot=2000):
         if a not in ("포함", "제외") or b not in ("포함", "제외"):     # a blank cell: unit left out of the analysis
             continue
         ref = a if a == b else (adjudicator or {}).get(uid)
+        scr, adj = (status or {}).get(statements.parent_of(uid), (False, False))
         per.append(dict(rating_id=rid, unit_id=uid, block=block, stratum=s, prob=p, rater_a=a, rater_b=b,
-                        reference=ref or "", author="포함" if uid in author_included else "제외"))
+                        reference=ref or "", author="포함" if uid in author_included else "제외",
+                        screened="yes" if scr else "", adjudicated="yes" if adj else ""))
     rng = np.random.default_rng(seed)
     kap = lambda rs: cohen_kappa([x["rater_a"] for x in rs], [x["rater_b"] for x in rs])
     ac1 = lambda rs: gwet_ac1([x["rater_a"] for x in rs], [x["rater_b"] for x in rs])
     summ = dict(unit="passage, or source unit of a passage divided by source citation",
                 n_rated_by_both=len(per), n_passages=len({x["block"] for x in per}),
-                kappa_q4=round(kap(per), 3), kappa_q4_ci=_cluster_ci(per, kap, rng, n_boot),
-                ac1_q4=round(ac1(per), 3), ac1_q4_ci=_cluster_ci(per, ac1, rng, n_boot),
+                kappa_q4=round(kap(per), 6), kappa_q4_ci=_cluster_ci(per, kap, rng, n_boot),
+                ac1_q4=round(ac1(per), 6), ac1_q4_ci=_cluster_ci(per, ac1, rng, n_boot),
                 unresolved=sum(1 for x in per if not x["reference"]))
     done = [x for x in per if x["reference"]]
-    p, rec = _precision(done), _recall(done)
-    summ.update(precision=round(p, 3), precision_ci=_cluster_ci(done, _precision, rng, n_boot),
-                n_author_included_rated=sum(1 for x in done if x["author"] == "포함"),
-                recall=round(rec, 3), recall_ci=_cluster_ci(done, _recall, rng, n_boot),
-                f1=round(2 * p * rec / (p + rec), 3) if (p + rec) else "",
-                kappa_author_vs_reference=round(cohen_kappa([x["author"] for x in done], [x["reference"] for x in done]), 3),
-                assumption="score-0 passages outside the sections holding final passages (stratum F) were not sampled "
-                           "and are assumed to contain no IBS-related symptom passage")
+    final = _scores(done, rng, n_boot)
+    summ.update(precision=final["precision"], precision_ci=final["precision_ci"],
+                n_author_included_rated=final["n_positive"], recall=final["recall"], recall_ci=final["recall_ci"],
+                f1=final["f1"], kappa_author_vs_reference=final["kappa_rated_units"])
+    summ["steps"] = {name: final if name == "final" else _scores(done, rng, n_boot, positive=f) for name, f in STEPS}
+    summ["assumption"] = ("score-0 passages outside the sections holding final passages (stratum F) were not sampled "
+                          "and are assumed to contain no IBS-related symptom passage")
     return summ, per
