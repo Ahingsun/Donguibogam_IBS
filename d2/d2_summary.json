@@ -1,0 +1,96 @@
+{
+ "unit": "passage, or source unit of a passage divided by source citation",
+ "n_rated_by_both": 870,
+ "n_passages": 384,
+ "kappa_q4": 0.718,
+ "kappa_q4_ci": "0.650–0.778",
+ "ac1_q4": 0.763,
+ "ac1_q4_ci": "0.707–0.819",
+ "unresolved": 112,
+ "precision": 1.0,
+ "precision_ci": "1.000–1.000",
+ "n_author_included_rated": 135,
+ "recall": 0.281,
+ "recall_ci": "0.202–0.382",
+ "f1": 0.439,
+ "kappa_author_vs_reference": 0.609,
+ "assumption": "score-0 passages outside the sections holding final passages (stratum F) were not sampled and are assumed to contain no IBS-related symptom passage",
+ "author_decisions_provisional": 0,
+ "blank_ratings": {
+  "동의보감_IBS조문_검토위원1_v2_완료.xlsx": [],
+  "동의보감_IBS조문_검토위원2_v2_완료.xlsx": [
+   "204-1",
+   "242",
+   "243"
+  ]
+ },
+ "vs_rater_a": {
+  "n": 870,
+  "n_author_included": 141,
+  "precision": 0.993,
+  "precision_ci": "0.978–1.000",
+  "recall": 0.232,
+  "recall_ci": "0.169–0.304",
+  "f1": 0.376,
+  "kappa_author": 0.53
+ },
+ "vs_rater_b": {
+  "n": 870,
+  "n_author_included": 141,
+  "precision": 0.965,
+  "precision_ci": "0.936–0.992",
+  "recall": 0.18,
+  "recall_ci": "0.132–0.243",
+  "f1": 0.303,
+  "kappa_author": 0.484
+ },
+ "consensus_misses": {
+  "adjudication": {
+   "units": 85,
+   "weighted_share_of_relevant": 0.223
+  },
+  "exclusion filter": {
+   "units": 8,
+   "weighted_share_of_relevant": 0.058
+  },
+  "screening (score below the threshold)": {
+   "units": 23,
+   "weighted_share_of_relevant": 0.437
+  }
+ },
+ "consensus_without_post_rating_rules": {
+  "n": 705,
+  "n_author_included": 135,
+  "precision": 1.0,
+  "precision_ci": "1.000–1.000",
+  "recall": 0.301,
+  "recall_ci": "0.220–0.411",
+  "f1": 0.463,
+  "kappa_author": 0.689,
+  "units_removed": 53
+ },
+ "split_votes_bounds": {
+  "all_relevant": {
+   "precision": 1.0,
+   "recall": 0.16
+  },
+  "none_relevant": {
+   "precision": 0.957,
+   "recall": 0.281
+  }
+ },
+ "adjudication_miss_reasons": {
+  "dysentery or bloody stool": 37,
+  "acute disease": 17,
+  "incidental mention": 17,
+  "alarm feature": 7,
+  "pain explicitly absent": 3,
+  "theory or prognosis": 3,
+  "systemic disease": 1
+ },
+ "screening_miss_kinds": {
+  "formula entry": 12,
+  "body text": 6,
+  "single-herb entry": 5
+ }
+}

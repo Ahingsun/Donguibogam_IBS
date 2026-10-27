@@ -1,0 +1,123 @@
+{
+  "version": "R1-2026-10-04",
+  "source_text_dir": "source_texts",
+  "source_text_glob": "동의보감_*.txt",
+  "clinical_books": [
+    "내경편",
+    "외형편",
+    "잡병편"
+  ],
+  "screening": {
+    "dictionary": "data/screening_dictionary.csv",
+    "exclusion_terms": "data/exclusion_terms.csv",
+    "threshold": 3,
+    "paediatric_section": "小兒"
+  },
+  "adjudication": {
+    "workbook": "decisions/연구자_재판정_R1.xlsx",
+    "record": "decisions/adjudication_record.csv",
+    "use_researcher_decisions_if_filled": true
+  },
+  "herbs": {
+    "aliases": "data/herb_aliases.csv",
+    "universe_min_passages": 2,
+    "formula_name_suffixes": [
+      "湯",
+      "散",
+      "丸",
+      "元",
+      "膏",
+      "飮",
+      "丹",
+      "煎",
+      "餠",
+      "錠",
+      "方"
+    ]
+  },
+  "index": {
+    "weights": {
+      "F": 25,
+      "E": 25,
+      "M": 15,
+      "R": 15,
+      "P": 10,
+      "T": 10
+    },
+    "efficacy_axes": "data/efficacy_axes.csv",
+    "axis_pattern_map": "data/axis_pattern_map.csv",
+    "efficacy_cap": 3,
+    "meridian_targets": [
+      "脾",
+      "胃",
+      "大腸",
+      "小腸",
+      "肝",
+      "腎"
+    ],
+    "meridian_cap": 3,
+    "meridian_sources": "data/meridian_sources.csv",
+    "pattern_cap": 4,
+    "requisite_rule": "dictionary_symptom_terms",
+    "tonify_rule": "large_intestine_tonify",
+    "tier2_weight": 0.5
+  },
+  "sensitivity": {
+    "random_seeds": [
+      1,
+      2,
+      3
+    ],
+    "random_draws": 1000,
+    "random_draws_seed": 20261004,
+    "perturbation": 0.5,
+    "worst_case_deltas": [
+      0.25,
+      0.5
+    ],
+    "top_k": [
+      10,
+      20
+    ],
+    "kiom_permutations": 10000,
+    "kiom_permutation_seed": 20261004
+  },
+  "acupoints": {
+    "names": "data/acupoint_names.csv"
+  },
+  "d2": {
+    "designs": {
+      "recommended": {
+        "A": "all",
+        "B": 60,
+        "C": 30,
+        "D2": 60,
+        "D1": 40,
+        "E": 40,
+        "F": 0
+      },
+      "minimum": {
+        "A": "all",
+        "B": 25,
+        "C": 10,
+        "D2": 15,
+        "D1": 0,
+        "E": 0,
+        "F": 0
+      }
+    },
+    "design": "recommended",
+    "seed": 20261005,
+    "n_calibration": 20,
+    "n_raters": 2,
+    "folder": "d2",
+    "bootstrap": 2000,
+    "rater_files": [
+      "동의보감_IBS조문_검토위원1_v2_완료.xlsx",
+      "동의보감_IBS조문_검토위원2_v2_완료.xlsx"
+    ]
+  },
+  "outputs": {
+    "source_text": false
+  }
+}

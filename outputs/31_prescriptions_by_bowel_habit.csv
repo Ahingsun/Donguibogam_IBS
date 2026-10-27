@@ -1,0 +1,25 @@
+﻿stratum_type,stratum,rank_in_stratum,prescription,source,score_zero,score_scored,score_dose,rank_overall,unit_id,n_in_stratum
+bowel_habit,C,1,厚朴湯,recommended in an IBS passage,61.75,61.75,65.37,17,내경편_권04:1185,40
+bowel_habit,C,2,七宣丸,recorded in an IBS passage,60.4,60.4,,21,내경편_권04:1183,40
+bowel_habit,C,3,脾約丸,recorded in an IBS passage,57.17,57.17,59.83,30,내경편_권04:1250,40
+bowel_habit,C,4,參仁丸,recorded in an IBS passage,51.74,51.74,55.4,43,내경편_권04:1210,40
+bowel_habit,C,5,小麻仁丸,recorded in an IBS passage,51.05,51.05,51.05,44,내경편_권04:1204,40
+bowel_habit,C,6,潤麻丸,recommended in an IBS passage,51.05,51.05,51.05,45,내경편_권04:1197,40
+bowel_habit,C,7,通神散,recommended in an IBS passage,50.62,50.62,47.28,46,내경편_권04:1220,40
+bowel_habit,C,8,黃芪湯,recorded in an IBS passage,50.21,50.21,50.21,47,내경편_권04:1238,40
+bowel_habit,C,9,推氣丸,recorded in an IBS passage,49.02,49.02,,49,내경편_권04:1284,40
+bowel_habit,C,10,五仁丸,recommended in an IBS passage,48.24,48.24,54.84,53,내경편_권04:1202,40
+bowel_habit,D,1,固中丸,recommended in an IBS passage,73.59,73.59,73.59,1,내경편_권04:760,66
+bowel_habit,D,2,三白湯,recommended in an IBS passage,71.9,71.9,77.35,2,내경편_권04:616,66
+bowel_habit,D,3,實腸散,recorded in an IBS passage,71.26,71.26,72.33,3,내경편_권03:905,66
+bowel_habit,D,4,實腸散,recorded in an IBS passage,71.26,71.26,73.04,4,내경편_권04:706,66
+bowel_habit,D,5,燥濕湯,recommended in an IBS passage,70.52,70.52,75.78,5,내경편_권04:619,66
+bowel_habit,D,6,六神湯,recorded in an IBS passage,69.81,69.81,71.34,6,내경편_권04:784,66
+bowel_habit,D,7,木香散,recorded in an IBS passage,69.81,69.81,71.34,7,내경편_권04:789,66
+bowel_habit,D,8,三神丸,recorded in an IBS passage,69.6,69.6,61.75,8,내경편_권04:781,66
+bowel_habit,D,9,加味四君子湯,recorded in an IBS passage,65.32,65.32,65.32,9,내경편_권04:693,66
+bowel_habit,D,10,苓朮湯,recommended in an IBS passage,65.27,65.27,65.27,10,잡병편_권01:98,66
+bowel_habit,M,1,理中湯,recorded in an IBS passage,56.27,56.27,57.93,35,잡병편_권02:1016,4
+bowel_habit,M,2,大柴胡湯,recommended in an IBS passage,49.81,49.81,49.03,48,잡병편_권02:1217,4
+bowel_habit,M,3,調胃承氣湯,recommended in an IBS passage,36.18,36.18,37.68,79,잡병편_권02:1214,4
+bowel_habit,M,4,加味小建中湯,recommended in an IBS passage,35.52,47.36,55.84,83,외형편_권03:200,4

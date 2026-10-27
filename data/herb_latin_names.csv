@@ -1,83 +1,71 @@
-﻿Hanja,Latin_pharmaceutical_name,source
-木香,Aucklandiae Radix,KP/KHP
-厚朴,Magnoliae Cortex,KP/KHP
-白朮,Atractylodis Rhizoma Alba,KP/KHP
-肉豆蔲,Myristicae Semen,KP/KHP
-芍藥,Paeoniae Radix,KP/KHP
-黃連,Coptidis Rhizoma,KP/KHP
-草豆蔲,Alpiniae Katsumadai Semen,KP/KHP
-茯苓,Poria,KP/KHP
-陳皮,Citri Unshius Pericarpium,KP/KHP
-砂仁,Amomi Fructus,KP/KHP
-甘草,Glycyrrhizae Radix et Rhizoma,KP/KHP
-吳茱萸,Evodiae Fructus,KP/KHP
-訶子,Terminaliae Fructus,KP/KHP
-蒼朮,Atractylodis Rhizoma,KP/KHP
-枳實,Ponciri Fructus Immaturus,KP/KHP
-枳殼,Aurantii Fructus Immaturus,KP/KHP
-乾薑,Zingiberis Rhizoma,KP/KHP
-靑皮,Citri Unshius Pericarpium Immaturus,KP/KHP
-草果,Amomi Tsao-ko Fructus,KP/KHP
-當歸,Angelicae Gigantis Radix,KP/KHP
-檳榔,Arecae Semen,KP/KHP
-山藥,Dioscoreae Rhizoma,KP/KHP
-肉桂,Cinnamomi Cortex,KP/KHP
-防風,Saposhnikoviae Radix,KP/KHP
-桃仁,Persicae Semen,KP/KHP
-香附子,Cyperi Rhizoma,KP/KHP
-麥芽,Hordei Fructus Germinatus,KP/KHP
-大黃,Rhei Radix et Rhizoma,KP/KHP
-白扁豆,Dolichoris Semen,KP/KHP
-蓽澄茄,Cubebae Fructus,KP/KHP
-高良薑,Alpiniae Officinari Rhizoma,KP/KHP
-胡椒,Piperis Nigri Fructus,KP/KHP
-山査,Crataegi Fructus,KP/KHP
-麻仁,Cannabis Semen,KP/KHP
-神麴,Massa Medicata Fermentata,KP/KHP
-烏梅,Mume Fructus,KP/KHP
-三稜,Sparganii Rhizoma,KP/KHP
-藿香,Agastachis Herba,KP/KHP
-白豆蔲,Amomi Fructus Rotundus,KP/KHP
-大腹皮,Arecae Pericarpium,KP/KHP
-益智仁,Alpiniae Oxyphyllae Fructus,KP/KHP
-烏藥,Linderae Radix,KP/KHP
-黃芩,Scutellariae Radix,KP/KHP
-補骨脂,Psoraleae Semen,KP/KHP
-香薷,Elsholtziae Herba,KP/KHP
-木瓜,Chaenomelis Fructus,KP/KHP
-紅豆蔲,Galangae Fructus,ChP
-郁李仁,Pruni Japonicae Semen,KP/KHP
-人參,Ginseng Radix,KP/KHP
-生薑,Zingiberis Rhizoma Recens,KP/KHP
-罌粟殼,Papaveris Pericarpium,ChP
-半夏,Pinelliae Tuber,KP/KHP
-萊菔,Raphani Semen,KP/KHP
-蓮實,Nelumbinis Semen,KP/KHP
-葛根,Puerariae Radix,KP/KHP
-川芎,Cnidii Rhizoma,KP/KHP
-肉蓯蓉,Cistanchis Herba,KP/KHP
-莪朮,Curcumae Rhizoma,KP/KHP
-赤石脂,Halloysitum Rubrum,KP/KHP
-禹餘粮,Limonitum,ChP
-升麻,Cimicifugae Rhizoma,KP/KHP
-芒硝,Natrii Sulfas,KP/KHP
-五味子,Schisandrae Fructus,KP/KHP
-附子,Aconiti Lateralis Radix Preparata,KP/KHP
-紫蘇,Perillae Folium,KP/KHP
-薏苡仁,Coicis Semen,KP/KHP
-丁香,Syzygii Flos,KP/KHP
-黃芪,Astragali Radix,KP/KHP
-白頭翁,Pulsatillae Radix,KP/KHP
-地楡,Sanguisorbae Radix,KP/KHP
-橡實,Querci Fructus,non-pharmacopoeial (botanical)
-菟絲子,Cuscutae Semen,KP/KHP
-柴胡,Bupleuri Radix,KP/KHP
-樗根白皮,Ailanthi Radicis Cortex,KP/KHP
-石榴殼,Granati Cortex,KP/KHP
-杏仁,Armeniacae Semen,KP/KHP
-桔梗,Platycodonis Radix,KP/KHP
-澤瀉,Alismatis Rhizoma,KP/KHP
-猪苓,Polyporus,KP/KHP
-白礬,Alumen,KP/KHP
-白芍藥,Paeoniae Radix Alba,ChP
-龍骨,Fossilia Ossis Mastodi,KP/KHP
+﻿herb,latin,source,monograph,matched_form,origin,version
+阿膠,Asini Corii Colla,KHP,아교(阿膠),阿膠,이 약은 당나귀 Equus asinus Linne (말과 Equidae) 또는 소 Bos taurus Linné var. domesticus Gmelin (소과 Bovidae)의 가죽을 물로 가열한 다음 추출하여 지방을 제거하고 농축건조하여 만든 교질이다. 이 약은 정량할 때 환산한 건조물에 대하여 총질소(N) 함유량이 13.0 % 이상이어야 한다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+沈香,Aquilariae Lignum,KHP,침향(沈香),沈香,이 약은 침향나무 Aquilaria agallocha Roxburgh (팥꽃나무과 Thymelaeaceae)의 수지가 침착된 수간목이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+牽牛子,Pharbitidis Semen,KP,견우자(牽牛子),牽牛子,이 약은 나팔꽃 Pharbitis nil Choisy 또는 둥근잎나팔꽃 Pharbitis purpurea Voigt (메꽃과 Convolvulaceae)의 잘 익은 씨이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+黃柏,Phellodendri Cortex,KP,황백(黃柏),黃柏,이 약은 황벽나무 Phellodendron amurense Ruprecht 또는 황피수 (黃皮樹) Phellodendron chinense Schneider (운향과 Rutaceae)의 줄기껍질로서 주피를 제거한 것이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+桑白皮,Mori Radicis Cortex,KP,상백피(桑白皮),桑白皮,이 약은 뽕나무 Morus alba Linné (뽕나무과 Moraceae)의 뿌리껍질로서 주피를 제거한 것이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+蘇子,Perillae Fructus,KHP,자소자(紫蘇子),紫蘇子,이 약은 차즈기 Perilla frutescens L. Britton var. acuta (Thunb.) Kudo 또는 주름소엽 Perilla frutescens Britton var. crispa Decne. (꿀풀과 Labiatae)의 열매이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+白芷,Angelicae Dahuricae Radix,KP,백지(白芷),白芷,이 약은 구릿대 Angelica dahurica Bentham et Hooker f. 또는 항백지(杭白芷) Angelica dahurica Bentham et Hooker f. var. formosana Shan et Yuan (산형과 Umbelliferae)의 뿌리이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+熟地黃,Rehmanniae Radix Preparata,KP,숙지황(熟地黃),熟地黃,이 약은 지황 Rehmannia glutinosa Liboschitz ex Steudel (현삼과 Scrophulariaceae)의 뿌리를 포제가공한 것이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+胡麻,Sesami Semen Nigra,KHP,흑지마(黑脂麻),黑脂麻,이 약은 참깨 Sesamum indicum Linné (참깨과 Pedaliaceae)의 씨로 검은색을 쓴다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+大棗,Zizyphi Fructus,KP,대추(大棗),大棗,이 약은 대추나무 Zizyphus jujuba Miller var. inermis Rehder 또는 보은대추나무 Zizyphus jujuba Miller var. hoonensis T. B. Lee (갈매나무과 Rhamnaceae)의 잘 익은 열매이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+滑石,Talcum,KHP,활석(滑石),滑石,이 약은 천연의 함수규산마그네슘이며 때때로 소량의 규산알루미늄을 함유한다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+木通,Akebiae Caulis,KP,목통(木通),木通,이 약은 으름덩굴 Akebia quinata Decaisne (으름덩굴과 Lardizabalaceae)의 줄기로서 주피를 제거한 것이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+車前子,Plantaginis Semen,KP,차전자(車前子),車前子,이 약은 질경이 Plantago asiatica Linné 또는 털질경이 Plantago depressa Willdenow (질경이과 Plantaginaceae)의 잘 익은 씨이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+梔子,Gardeniae Fructus,KP,치자(梔子),梔子,이 약은 치자나무 Gardenia jasminoides Ellis (꼭두서니과 Rubiaceae)의 잘 익은 열매로서 그대로 또는 끓는 물에 데치거나 찐 것이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+生地黃,Rehmanniae Radix Recens,KHP,생지황(生地黃),生地黃,이 약은 지황 Rehmannia glutinosa (Gaertner) Liboschitz ex Steudel (현삼과 Scrophulariaceae)의 신선한 뿌리이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+羌活,Osterici seu Notopterygii Radix et Rhizoma,KP,강활(羌活),羌活,이 약은 강활 Ostericum koreanum Maximowicz의 뿌리 또는 중국강활 (中國羌活) Notopterygium incisum Ting 또는 관엽강활 (寬葉羌活) Notopterygium forbesii H. Boissieu (산형과 Umbelliferae)의 뿌리줄기 및 뿌리이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+皂莢,Gleditsiae Fructus,KHP,조협(皂莢),皂莢,이 약은 조각자나무 Gleditsia sinensis Lamark 또는 주엽나무 Gleditsia japonica Miquel (콩과 Leguminosae)의 열매이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+獨活,Araliae Continentalis Radix,KP,독활(獨活),獨活,이 약은 독활 Aralia continentalis Kitagawa (두릅나무과 Araliaceae)의 뿌리이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+葱白,Allii Fistulosi Bulbus,KHP,총백(葱白),葱白,이 약은 파 Allium fistulosum Linné (백합과 Liliaceae)의 신선한 비늘줄기이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+桂枝,Cinnamomi Ramulus,KHP,계지(桂枝),桂枝,이 약은 육계(肉桂) Cinnamomum cassia J.Presl (녹나무과 Lauraceae)의 어린 가지이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+紅花,Carthami Flos,KP,홍화(紅花),紅花,이 약은 잇꽃 Carthamus tinctorius Linné (국화과 Compositae)의 관상화이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+雞子,,none,,,,
+山茱萸,Corni Fructus,KP,산수유(山茱萸),山茱萸,이 약은 산수유나무 Cornus officinalis Siebold et Zuccarini (층층나무과 Cornaceae)의 잘 익은 열매로서 씨를 제거한 것이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+硫黃,Sulfur,KHP,석유황(石硫黃),石硫黃,이 약은 원소광물 유황이나 유황을 함유하는 물질을 가공하여 얻은 결정이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+茴香,Foeniculi Fructus,KP,회향(茴香),茴香,이 약은 회향 Foeniculum vulgare Miller (산형과 Umbelliferae)의 잘 익은 열매이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+乳香,Olibanum,KHP,유향(乳香),乳香,이 약은 유향나무 Boswellia carterii Birdwood 또는 기타 동속 근연식물 (감람과 Burseraceae)의 줄기에 상처를 내어 얻은 수지이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+連翹,Forsythiae Fructus,KP,연교(連翹),連翹,"이 약은 의성개나리 Forsythia viridissima Lindley 또는 연교 (連翹) Forsythia suspensa Vahl (물푸레나무과 Oleaceae)의 열매이다. 열매가 막 익기 시작하여 녹색 빛이 남아있을 때 채취하여 쪄서 말린 것을 청교 (靑翹)라 하고, 완전히 익었을 때 채취하여 말린 것을 노교 (老翹)라 한다.",[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+芡仁,Euryales Semen,KP,검인(芡仁),芡仁,이 약은 가시연꽃 Euryale ferox Salisbury (수련과 Nymphaeaceae)의 잘 익은 씨이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+麻黃,Ephedrae Herba,KP,마황(麻黃),麻黃,"이 약은 초마황 (草麻黃) Ephedra sinica Stapf, 중마황 (中麻黃) Ephedra intermedia Schrenk et C. A. Meyer 또는 목적마황 (木賊麻黃) Ephedra equisetina Bunge (마황과 Ephedraceae)의 초질경이다.",[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+鴉片,,none,,,,
+槐實,Sophorae Fructus,KHP,괴각(槐角),槐角,이 약은 회화나무 Sophora japonica Linné (콩과 Leguminosae)의 잘 익은 열매이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+杜仲,Eucommiae Cortex,KP,두충(杜仲),杜仲,이 약은 두충 Eucommia ulmoides Oliver (두충과 Eucommiaceae)의 줄기껍질로서 주피를 제거한 것이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+石膏,Gypsum Fibrosum,KHP,석고(石膏),石膏,이 약은 황산염광물 석고이다. 이 약은 정량할 때 황산칼슘수화물(CaSO4ㆍ2H2O : 172.17) 95.0 % 이상을 함유한다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+槐花,Sophorae Flos,KP,괴화(槐花),槐花,이 약은 회화나무 Sophora japonica Linné (콩과 Leguminosae)의 꽃봉오리와 꽃이다. 전자를 괴미라 하고 후자를 괴화라고 한다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+荊芥,Schizonepetae Spica,KP,형개(荊芥),荊芥,이 약은 형개 Schizonepeta tenuifolia Briquet (꿀풀과 Labiatae)의 꽃이삭 (花穗)이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+蛇床子,Cnidi Fructus,KHP,사상자(蛇床子),蛇床子,이 약은 벌사상자 Cnidium monnieri (L.) Cusson 또는 사상자 Torilis japonica (Houtt.) DC. (산형과 Umbelliferae)의 열매이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+石菖蒲,Acori Graminei Rhizoma,KHP,석창포(石菖蒲),石菖蒲,이 약은 석창포 Acorus gramineus Solander (천남성과 Araceae)의 뿌리줄기이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+知母,Anemarrhenae Rhizoma,KP,지모(知母),知母,이 약은 지모 Anemarrhena asphodeloides Bunge (백합과 Liliaceae)의 뿌리줄기이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+前胡,Peucedani Radix,KHP,전호(前胡),前胡,이 약은 백화전호(白花前胡) Peucedanum praeruptorum Dunn 또는 바디나물 Angelica decursiva (Miq.) Franch. et Sav. (=Peucedanum decursivum Maxim.) (산형과 Umbelliferae)의 뿌리이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+巴豆,Crotonis Semen,KP,파두(巴豆),巴豆,이 약은 파두 (巴豆) Croton tiglium Linné (대극과 Euphorbiaceae)의 씨이다. 이 약은 씨껍질을 제거하여 쓴다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+海松子,Pini Koraiensis Semen,KHP,해송자(海松子),海松子,이 약은 잣나무 Pinus koraiensis Siebold et Zuccarini (소나무과 Pinaceae)의 씨이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+蓽撥,Piperis Longi Fructus,KHP,필발(蓽撥),蓽撥,이 약은 필발(蓽撥) Piper longum Linné (후추과 Piperaceae)의 덜 익은 열매이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+枸杞子,Lycii Fructus,KP,구기자(枸杞子),枸杞子,이 약은 구기자나무 Lycium chinense Miller 또는 영하구기(寧夏枸杞) Lycium barbarum Linné (가지과 Solanaceae)의 열매이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+牛膝,Achyranthis Radix,KP,우슬(牛膝),牛膝,이 약은 쇠무릎 Achyranthes japonica Nakai 또는 우슬 (牛膝) Achyranthes bidentata Blume(비름과 Amaranthaceae)의 뿌리이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+川椒,,none,,,,
+遠志,Polygalae Radix,KP,원지(遠志),遠志,이 약은 원지 Polygala tenuifolia Willdenow (원지과 Polygalaceae)의 뿌리이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+竹茹,Phyllostachyos Caulis in Taeniam,KHP,죽여(竹茹),竹茹,"이 약은 솜대 Phyllostachys nigra Munro var. henonis Stapf, 왕대 Phyllostachys bambusoides Siebold et Zuccarini 또는 기타동속근연식물(벼과 Gramineae)의 겉껍질을 제거한 중간층이다.",4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+茵蔯,Artemisiae Capillaris Herba,KHP,인진호(茵蔯蒿),茵蔯蒿,"이 약은 사철쑥 Artemisia capillaris Thunberg (국화과 Compositae)의 지상부이다. 봄에 채취한 것을 ‘면인진(綿茵蔯)’이라 하고, 가을에 채취한 것을 ‘인진호(茵蔯蒿)’라 한다.",4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+瞿麥,Dianthi Herba,KHP,구맥(瞿麥),瞿麥,이 약은 술패랭이꽃 Dianthus superbus var. longicalycinus Williams 또는 패랭이꽃 Dianthus chinensis Linné (석죽과 Caryophyllaceae)의 지상부이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+松烟墨,,none,,,,
+百草霜,Pulvis Fumi Carbonistatus,KHP,백초상(百草霜),百草霜,이 약은 산초(山草)를 태워서 생긴 솥밑의 그을음 및 굴뚝 속에 있는 그을음 재이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+麝香,Moschus,KHP,사향(麝香),麝香,"이 약은 난쟁이사향노루 Moschus berezovskii Flerove, 산사향노루 Moschus chrysogaster Hodgson 또는 사향노루 Moschus moschiferus Linné (사향노루과 Moschidae) 수컷의 사향선 분비물로써 그 내용물을 꺼내어 말린 것을 가루사향이라 하고, 주머니 모양의 사낭(麝囊)을 그대로 잘라내어 말린 것을 주머니사향이라고 한다.",4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+秦皮,Fraxini Cortex,KHP,진피(秦皮),秦皮,이 약은 물푸레나무 Fraxinus rhynchophylla Hance 또는 동속근연식물 (물푸레나무과 Oleaceae)의 줄기껍질 또는 가지껍질이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+紅麴,,none,,,,
+甘遂,Euphorbiae Kansui Radix,KHP,감수(甘遂),甘遂,이 약은 감수(甘遂) Euphorbia kansui Liou ex Wang (대극과 Euphorbiaceae)의 코르크층을 벗긴 덩이뿌리이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+薄荷,Menthae Herba,KP,박하(薄荷),薄荷,이 약은 박하 Mentha arvensis Linné var. piperascens Malinvaud ex Holmes (꿀풀과 Labiatae)의 지상부이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+細辛,Asiasari Radix et Rhizoma,KP,세신(細辛),細辛,이 약은 민족도리풀 Asiasarum heterotropoides F. Maekawa var. mandshuricum F. Maekawa 또는 서울족도리풀 Asiasarum sieboldii Miquel var. seoulense Nakai (쥐방울과 Aristolochiaceae)의 뿌리 및 뿌리줄기이다.,[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+烏頭,Aconiti Tuber,KHP,천오(川烏),川烏,이 약은 오두(烏頭) Aconitum carmichaeli Debeaux (미나리아재비과 Ranunculaceae)의 모근의 덩이뿌리이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+雄黃,,none,,,,
+牛乳,,none,,,,
+瓜蔕,Melonis Pedicellus,KHP,과체(瓜蔕),瓜蔕,이 약은 참외 Cucumis melo Linné (박과 Cucurbitaceae)의 열매꼭지이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+赤小豆,Vignae Angularis Semen,KHP,적소두(赤小豆),赤小豆,이 약은 팥 Vigna angularis (Willd.) Ohwi & H. Ohashi 또는 덩굴팥 Vigna umbellata (Thunb.) Ohwi & H. Ohashi (콩과 Leguminosae)의 씨이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+白梅,,none,,,,
+漿水,,none,,,,
+亂髮,,none,,,,
+五倍子,Galla Rhois,KP,오배자(五倍子),五倍子,"이 약은 붉나무 Rhus javanica Linné, 청부양 (靑麩楊) Rhus potaninii Maximowicz 또는 홍부양 (紅麩楊) Rhus punjabensis Stew. var. sinica Rehder et Wilson (옻나무과 Anacardiaceae)의 잎 위에 주로 오배자면충 Schlechtendalia chinensis Bell (면충과 Pemphigidae)이 기생하여 만든 벌레집이다. 외형에 따라 두배 (肚倍)와 각배 (角倍)로 나뉜다.",[별표 4] 의약품각조 제2부 (제2022-73호).hwpx
+薤白,Allii Macrostemi Bulbus,KHP,해백(薤白),薤白,이 약은 산달래 Allium macrostemon Bunge 또는 염교 Allium chinensis G.Don (백합과 Liliaceae)의 뿌리줄기이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+石榴,Granati Fructus,KHP,석류(石榴),石榴,이 약은 석류나무 Punica granatum Linné (석류나무과 Punicaceae)의 열매이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+露蜂房,Vespae Nidus,KHP,노봉방(露蜂房),露蜂房,이 약은 어리별쌍살벌 Polistes mandarinus Saussure et Geer 또는 기타 동속 근연벌 (말벌과 Vespidae)이 만든 집이다.,4.+[별표3]생약규격집_Ⅲ.의약품각조+제1부.hwp
+韭菜,,none,,,,

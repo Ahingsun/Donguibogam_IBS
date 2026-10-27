@@ -1,0 +1,52 @@
+﻿name,aliases,who_code,english,kind,note
+天樞,天樞,ST25,Tianshu,standard,
+氣海,氣海,CV6,Qihai,standard,
+神闕,神闕|臍中,CV8,Shenque,standard,臍中 = 神闕
+關元,關元|丹田,CV4,Guanyuan,standard,丹田 = 關元 (침구편: 關元 一名丹田)
+中脘,中脘|太倉,CV12,Zhongwan,standard,太倉 = 中脘
+上脘,上脘,CV13,Shangwan,standard,
+下脘,下脘,CV10,Xiawan,standard,
+中極,中極,CV3,Zhongji,standard,
+水分,水分,CV9,Shuifen,standard,
+巨闕,巨闕,CV14,Juque,standard,
+足三里,足三里|三里,ST36,Zusanli,standard,三里 in the disease sections read as 足三里
+上巨虛,上巨虛|巨虛上廉,ST37,Shangjuxu,standard,
+水道,水道,ST28,Shuidao,standard,
+內庭,內庭,ST44,Neiting,standard,
+三陰交,三陰交,SP6,Sanyinjiao,standard,
+陰陵泉,陰陵泉,SP9,Yinlingquan,standard,
+公孫,公孫,SP4,Gongsun,standard,
+大都,大都,SP2,Dadu,standard,
+商丘,商丘,SP5,Shangqiu,standard,
+太白,太白,SP3,Taibai,standard,
+隱白,隱白,SP1,Yinbai,standard,
+腹哀,腹哀,SP16,Fuai,standard,
+脾腧,脾腧|脾兪,BL20,Pishu,standard,
+小腸腧,小腸腧|小腸兪,BL27,Xiaochangshu,standard,
+承山,承山,BL57,Chengshan,standard,
+崑崙,崑崙,BL60,Kunlun,standard,
+然谷,然谷,KI2,Rangu,standard,
+復溜,復溜,KI7,Fuliu,standard,
+照海,照海,KI6,Zhaohai,standard,
+太鍾,太鍾|大鍾,KI4,Dazhong,standard,
+湧泉,湧泉|涌泉,KI1,Yongquan,standard,
+陰谷,陰谷,KI10,Yingu,standard,
+合谷,合谷,LI4,Hegu,standard,
+三間,三間|三閒,LI3,Sanjian,standard,
+偏歷,偏歷,LI6,Pianli,standard,
+外關,外關,TE5,Waiguan,standard,
+支溝,支溝,TE6,Zhigou,standard,
+內關,內關,PC6,Neiguan,standard,
+太衝,太衝|大衝,LR3,Taichong,standard,
+章門,章門,LR13,Zhangmen,standard,
+期門,期門,LR14,Qimen,standard,
+日月,日月|神光,GB24,Riyue,standard,神光 = 日月
+百會,百會,GV20,Baihui,standard,
+大椎,大椎|大顀,GV14,Dazhui,standard,
+獨陰,獨陰,EX-LE11,Duyin,extra,WHO standard extra point
+長谷,長谷|循元,,Changgu,donguibogam_extra,침구편 別穴: 在脇臍傍相去各五寸
+下腰,下腰|三宗骨,,Xiayao,donguibogam_extra,침구편 別穴: 在八髎正中央 脊骨上
+腸遶,腸遶,,Changrao,donguibogam_extra,침구편 別穴: 挾玉泉相去二寸
+環岡,環岡|環崗,,Huangang,donguibogam_extra,침구편 別穴: 在小腸腧下二寸橫文間
+窮谷,窮谷,,,unidentified,not found among the acupoint entries of the Acupuncture chapter
+足三間,足三間,,,unidentified,not found among the acupoint entries of the Acupuncture chapter

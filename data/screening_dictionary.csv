@@ -1,0 +1,108 @@
+﻿term,weight,category,domain,symptom_domain,english
+得後與氣,4,Painful Diarrhea (痛瀉) C1,C1,yes,Relief After Defecation/Passage of Qi
+快然如衰,4,Painful Diarrhea (痛瀉) C1,C1,yes,Marked Relief After Evacuation
+瀉去卽寬,4,Painful Diarrhea (痛瀉) C1,C1,yes,Relief Immediately After Evacuation
+五更溏泄,3,Dawn Diarrhea (五更泄) C2,C2/C3,yes,Dawn Loose-Stool Diarrhea
+抱壞雞子,3,Mucus/abnormal stool C3,C2/C3,yes,Rotten-Egg–Like Stool
+瀉後痛減,3,Painful Diarrhea (痛瀉) C1,C1,yes,Pain Relieved After Diarrhea
+痛泄,3,Painful Diarrhea (痛瀉) C1,C1,yes,Painful Diarrhea
+痛瀉,3,Painful Diarrhea (痛瀉) C1,C1,yes,Painful Diarrhea
+脾泄,3,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Spleen Diarrhea
+脾約,3,Constipation (便秘) C2/C3,C2/C3,yes,Spleen-Constraint Constipation
+脾腎泄,3,Dawn Diarrhea (五更泄) C2,C2/C3,yes,Spleen–Kidney Diarrhea
+腎泄,3,Dawn Diarrhea (五更泄) C2,C2/C3,yes,Kidney Diarrhea
+腹痛泄瀉,3,Painful Diarrhea (痛瀉) C1,C1,yes,Abdominal Pain with Diarrhea
+食後倒飽,3,Painful Diarrhea (痛瀉) C1,C1,yes,Postprandial Fullness/Regurgitation
+飯後隨卽,3,Painful Diarrhea (痛瀉) C1,C1,yes,Immediate Defecation After Meals
+下利,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Diarrhea
+下痢,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Dysentery
+久泄,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Chronic Diarrhea
+久痢,2,Dysentery (痢疾) C2/C3,C2/C3,yes,Chronic Dysentery
+休息痢,2,Dysentery (痢疾) C2/C3,C2/C3,yes,Intermittent Dysentery
+便溏,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Loose Stool
+便秘,2,Constipation (便秘) C2/C3,C2/C3,yes,Constipation
+大便不通,2,Constipation (便秘) C2/C3,C2/C3,yes,Obstructed Defecation
+大便燥,2,Constipation (便秘) C2/C3,C2/C3,yes,Dry Stool
+大便秘,2,Constipation (便秘) C2/C3,C2/C3,yes,Constipation
+大便秘結,2,Constipation (便秘) C2/C3,C2/C3,yes,Constipation
+大便閉,2,Constipation (便秘) C2/C3,C2/C3,yes,Blocked Defecation
+大便難,2,Constipation (便秘) C2/C3,C2/C3,yes,Difficulty Defecating
+完穀不化,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Undigested Food in Stool
+小腹痛,2,Abdominal pain (腹痛) C1,C1,yes,Lower Abdominal Pain
+晨泄,2,Dawn Diarrhea (五更泄) C2,C2/C3,yes,Morning Diarrhea
+木剋土,2,Liver–spleen disharmony / affective,pattern,no,Wood Overcoming Earth
+木賊土,2,Liver–spleen disharmony / affective,pattern,no,Wood Injuring Earth
+氣痢,2,Dysentery (痢疾) C2/C3,C2/C3,yes,Qi Dysentery
+水泄,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Watery Diarrhea
+水穀不化,2,Mucus/abnormal stool C3,C2/C3,yes,Undigested Food/Drink in Stool
+泄瀉,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Diarrhea
+洞泄,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Gushing Diarrhea
+溏泄,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Loose-Stool Diarrhea
+滑泄,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Slippery Diarrhea
+濕泄,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Damp Diarrhea
+濡泄,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Dampness Diarrhea
+火泄,2,Pattern — Excess (實),pattern,no,Fire Diarrhea
+熱泄,2,Pattern — Excess (實),pattern,no,Heat Diarrhea
+燥結,2,Constipation (便秘) C2/C3,C2/C3,yes,Dry Constipation
+痢疾,2,Dysentery (痢疾) C2/C3,C2/C3,yes,Dysentery
+白痢,2,Dysentery (痢疾) C2/C3,C2/C3,yes,White Dysentery
+秘澁,2,Constipation (便秘) C2/C3,C2/C3,yes,Difficult Constipation
+腸澼,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Intestinal Dysentery
+腸鳴,2,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Borborygmus
+腹中切痛,2,Abdominal pain (腹痛) C1,C1,yes,Cutting Abdominal Pain
+腹中痛,2,Abdominal pain (腹痛) C1,C1,yes,Abdominal Pain
+腹痛,2,Abdominal pain (腹痛) C1,C1,yes,Abdominal Pain
+臍腹痛,2,Abdominal pain (腹痛) C1,C1,yes,Periumbilical Abdominal Pain
+自利,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Spontaneous Diarrhea
+虛泄,2,Pattern — Deficiency (虛),pattern,no,Deficiency Diarrhea
+虛痢,2,Dysentery (痢疾) C2/C3,C2/C3,yes,Deficiency Dysentery
+蟹渤,2,Mucus/abnormal stool C3,C2/C3,yes,Crab-Broth–Like Stool
+裏急後重,2,Tenesmus/urgency (裏急後重) C1,C1,yes,Tenesmus
+赤痢,2,Dysentery (痢疾) C2/C3,C2/C3,yes,Red Dysentery
+赤白痢,2,Dysentery (痢疾) C2/C3,C2/C3,yes,Red-and-White Dysentery
+飱泄,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Postprandial Diarrhea
+鶩溏,2,Diarrhea (泄瀉) C2/C3,C2/C3,yes,Duck-Mire Diarrhea
+㽲痛,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Colicky Pain
+下重,1,Tenesmus/urgency (裏急後重) C1,C1,yes,Rectal Heaviness
+不思飮食,1,Flatus/appetite C1,C1-supportive,yes,Loss of Appetite
+不欲食,1,Flatus/appetite C1,C1-supportive,yes,Lack of Desire to Eat
+不能食,1,Flatus/appetite C1,C1-supportive,yes,Inability to Eat
+切痛,1,Abdominal pain (腹痛) C1,C1,yes,Cutting Pain
+努責,1,Tenesmus/urgency (裏急後重) C1,C1,yes,Straining to Defecate
+失氣,1,Flatus/appetite C1,C1-supportive,yes,Flatulence
+宿食,1,Pattern — Excess (實),pattern,no,Retained Food
+寒濕,1,Pattern — Excess (實),pattern,no,Cold-Dampness
+實秘,1,Constipation (便秘) C2/C3,C2/C3,yes,Excess Constipation
+後重,1,Tenesmus/urgency (裏急後重) C1,C1,yes,Tenesmus
+心腹痛,1,Abdominal pain (腹痛) C1,C1,yes,Epigastric and Abdominal Pain
+急痛,1,Abdominal pain (腹痛) C1,C1,yes,Acute Pain
+氣滯,1,Pattern — Excess (實),pattern,no,Qi Stagnation
+滯下,1,Tenesmus/urgency (裏急後重) C1,C1,yes,Dysenteric Tenesmus
+濕熱,1,Pattern — Excess (實),pattern,no,Damp-Heat
+濯濯,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Gurgling Sound
+熱秘,1,Constipation (便秘) C2/C3,C2/C3,yes,Heat Constipation
+白沫,1,Mucus/abnormal stool C3,C2/C3,yes,White Frothy Stool
+矢氣,1,Flatus/appetite C1,C1-supportive,yes,Flatulence
+稠粘,1,Mucus/abnormal stool C3,C2/C3,yes,Thick and Sticky Stool
+窘迫,1,Tenesmus/urgency (裏急後重) C1,C1,yes,Rectal Urgency and Discomfort
+肝脾,1,Liver–spleen disharmony / affective,pattern,no,Liver–Spleen Disharmony
+脹滿,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Abdominal Fullness and Distension
+脾胃虛,1,Pattern — Deficiency (虛),pattern,no,Spleen–Stomach Deficiency
+脾虛,1,Pattern — Deficiency (虛),pattern,no,Spleen Deficiency
+腎虛,1,Pattern — Deficiency (虛),pattern,no,Kidney Deficiency
+腹中鳴,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Abdominal Rumbling
+腹滿,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Abdominal Fullness
+腹脹,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Abdominal Distension
+膨脹,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Abdominal Bloating
+虛冷,1,Pattern — Deficiency (虛),pattern,no,Deficiency Cold
+虛寒,1,Pattern — Deficiency (虛),pattern,no,Deficiency Cold Syndrome
+虛秘,1,Constipation (便秘) C2/C3,C2/C3,yes,Deficiency Constipation
+裏急,1,Tenesmus/urgency (裏急後重) C1,C1,yes,Internal Urgency
+賁響,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Loud Intestinal Sound
+陽虛,1,Pattern — Deficiency (虛),pattern,no,Yang Deficiency
+雷鳴,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Rumbling Sound
+食少,1,Flatus/appetite C1,C1-supportive,yes,Reduced Appetite
+食已,1,Flatus/appetite C1,C1-supportive,yes,After Eating
+食積,1,Pattern — Excess (實),pattern,no,Food Stagnation
+食積痢,1,Dysentery (痢疾) C2/C3,C2/C3,yes,Food-Stagnation Dysentery
+鳴濯濯,1,"Distension/borborygmus (脹滿, 腸鳴) C2/C3",supportive-distension,yes,Gurgling Rumbling

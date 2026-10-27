@@ -1,3 +1,3 @@
-# Python 3.8+
-openpyxl>=3.1     # reproduce_n162.py reads the adjudication workbook (.xlsx)
-# parse_corpus.py / ibs_pipeline.py use only the standard library.
+numpy==2.5.3
+openpyxl==3.1.5
+matplotlib==3.11.2

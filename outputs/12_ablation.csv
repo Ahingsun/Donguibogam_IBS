@@ -1,0 +1,7 @@
+﻿analysis,n_herbs,spearman,kendall_tau_b,pairwise_flip_rate,top10_retained,top10_jaccard,top20_retained,top20_jaccard
+without F,63,0.974,0.891,0.043,8/10,0.667,18/20,0.818
+without E,63,0.92,0.799,0.098,10/10,1.0,18/20,0.818
+without M,63,0.971,0.879,0.058,8/10,0.667,18/20,0.818
+without R,63,0.991,0.966,0.017,9/10,0.818,19/20,0.905
+without P,63,0.992,0.942,0.028,10/10,1.0,20/20,1.0
+without T,63,0.998,0.989,0.006,9/10,0.818,20/20,1.0

@@ -1,0 +1,145 @@
+﻿unit_id,passage,chapter,section,subsection,detail,type,prescription,score,terms,link_terms,pain_terms,stool_terms,chronicity,bowel_habit,habit_source,patterns,inclusion_codes,tier,decision_source
+내경편_권03:362#2,내경편_권03:362,內景篇卷之三,脾臟,脾病虛實,,body,,6,腸鳴|飱泄|腹滿|腹脹,,,飱泄,,D,adjudication record,,"I-1b, I-1d, I-2",2,adjudication record
+내경편_권03:377,내경편_권03:377,內景篇卷之三,脾臟,脾病治法,,presc,益黃散,6,痛泄|腹痛|虛冷,痛泄,腹痛,,,D,adjudication record,肝脾不和|寒濕,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권03:379,내경편_권03:379,內景篇卷之三,脾臟,脾病治法,,presc,補脾湯,3,泄瀉|虛冷,,,泄瀉,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권03:583#3,내경편_권03:583,內景篇卷之三,腎臟,腎病證,,body,,5,大便難|下重|急痛|腹脹,,急痛,,,D,adjudication record,,"I-1a, I-1b, I-1d, I-2",1,adjudication record
+내경편_권03:766,내경편_권03:766,內景篇卷之三,胃腑,胃病治法,,presc,異功散,6,腹痛|自利|不思飮食|脾胃虛,,腹痛,自利,,D,adjudication record,脾胃虛弱,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권03:893#1,내경편_권03:893,內景篇卷之三,大腸腑,大腸病證,,body,,11,腸鳴|腹痛|飱泄|鶩溏|切痛|濯濯|鳴濯濯,,腹痛|切痛,飱泄,,D,adjudication record,寒濕,"I-1a, I-1b, I-1d, I-2",1,adjudication record
+내경편_권03:893#2,내경편_권03:893,內景篇卷之三,大腸腑,大腸病證,,body,,11,腸鳴|腹痛|飱泄|鶩溏|切痛|濯濯|鳴濯濯,,,飱泄,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권03:893#3,내경편_권03:893,內景篇卷之三,大腸腑,大腸病證,,body,,11,腸鳴|腹痛|飱泄|鶩溏|切痛|濯濯|鳴濯濯,,,鶩溏,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권03:903,내경편_권03:903,內景篇卷之三,大腸腑,大腸病治法,,presc,瀉白湯,5,腹痛|臍腹痛|腹脹,,腹痛|臍腹痛,,,C,adjudication record,,"I-1a, I-1c, I-2",1,adjudication record
+내경편_권03:905,내경편_권03:905,內景篇卷之三,大腸腑,大腸病治法,,presc,實腸散,11,痛泄|腹痛泄瀉|泄瀉|腹痛|虛寒,痛泄|腹痛泄瀉,腹痛,泄瀉,,D,adjudication record,肝脾不和|寒濕,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:555#1,내경편_권04:555,內景篇卷之四,大便,大便病因,,body,,22,水穀不化|洞泄|濡泄|痢疾|白痢|腸澼|赤痢|赤白痢|飱泄|鶩溏|滯下|食積,,,腸澼|飱泄|痢疾,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:555#2,내경편_권04:555,內景篇卷之四,大便,大便病因,,body,,22,水穀不化|洞泄|濡泄|痢疾|白痢|腸澼|赤痢|赤白痢|飱泄|鶩溏|滯下|食積,,,洞泄|濡泄|飱泄,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:555#4,내경편_권04:555,內景篇卷之四,大便,大便病因,,body,,22,水穀不化|洞泄|濡泄|痢疾|白痢|腸澼|赤痢|赤白痢|飱泄|鶩溏|滯下|食積,,,鶩溏,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:599,내경편_권04:599,內景篇卷之四,大便,泄證有五,,presc,胃苓湯,6,水穀不化|泄瀉|腹痛,,腹痛,泄瀉|水穀不化,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:602#1,내경편_권04:602,內景篇卷之四,大便,泄瀉諸證,,body,,32,脾泄|脾腎泄|腎泄|久泄|完穀不化|泄瀉|洞泄|滑泄|濕泄|濡泄|火泄|熱泄|虛泄|飱泄|食積,,,脾泄|久泄|洞泄|滑泄|濕泄|濡泄|飱泄|脾腎泄|腎泄,久泄,D,adjudication record,脾胃虛弱|脾腎陽虛|寒濕|濕熱|氣滯,"I-1b, I-2",2,adjudication record
+내경편_권04:602#2,내경편_권04:602,內景篇卷之四,大便,泄瀉諸證,,body,,32,脾泄|脾腎泄|腎泄|久泄|完穀不化|泄瀉|洞泄|滑泄|濕泄|濡泄|火泄|熱泄|虛泄|飱泄|食積,,,,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:602#3,내경편_권04:602,內景篇卷之四,大便,泄瀉諸證,,body,,32,脾泄|脾腎泄|腎泄|久泄|完穀不化|泄瀉|洞泄|滑泄|濕泄|濡泄|火泄|熱泄|虛泄|飱泄|食積,,,,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:602#4,내경편_권04:602,內景篇卷之四,大便,泄瀉諸證,,body,,32,脾泄|脾腎泄|腎泄|久泄|完穀不化|泄瀉|洞泄|滑泄|濕泄|濡泄|火泄|熱泄|虛泄|飱泄|食積,,,泄瀉,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:602#7,내경편_권04:602,內景篇卷之四,大便,泄瀉諸證,,body,,32,脾泄|脾腎泄|腎泄|久泄|完穀不化|泄瀉|洞泄|滑泄|濕泄|濡泄|火泄|熱泄|虛泄|飱泄|食積,,,完穀不化,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:602#8,내경편_권04:602,內景篇卷之四,大便,泄瀉諸證,,body,,32,脾泄|脾腎泄|腎泄|久泄|完穀不化|泄瀉|洞泄|滑泄|濕泄|濡泄|火泄|熱泄|虛泄|飱泄|食積,,,完穀不化|飱泄,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:602#10,내경편_권04:602,內景篇卷之四,大便,泄瀉諸證,,body,,32,脾泄|脾腎泄|腎泄|久泄|完穀不化|泄瀉|洞泄|滑泄|濕泄|濡泄|火泄|熱泄|虛泄|飱泄|食積,,,,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:624#2,내경편_권04:624,內景篇卷之四,大便,泄瀉諸證,濕泄,body,,11,水穀不化|洞泄|濕泄|濡泄|腸鳴|寒濕,,,洞泄|濡泄,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:624#4,내경편_권04:624,內景篇卷之四,大便,泄瀉諸證,濕泄,body,,11,水穀不化|洞泄|濕泄|濡泄|腸鳴|寒濕,,,濕泄|水穀不化,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:624#6,내경편_권04:624,內景篇卷之四,大便,泄瀉諸證,濕泄,body,,11,水穀不化|洞泄|濕泄|濡泄|腸鳴|寒濕,,,,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:624#7,내경편_권04:624,內景篇卷之四,大便,泄瀉諸證,濕泄,body,,11,水穀不化|洞泄|濕泄|濡泄|腸鳴|寒濕,,,洞泄,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:632,내경편_권04:632,內景篇卷之四,大便,泄瀉諸證,濕泄,presc,麴芎丸,4,滑泄|飱泄,,,滑泄|飱泄,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:648#1,내경편_권04:648,內景篇卷之四,大便,泄瀉諸證,寒泄,body,,9,完穀不化|自利|鶩溏|切痛|腹脹|雷鳴,,切痛,完穀不化,,D,adjudication record,,"I-1a, I-1b, I-1d, I-2",1,adjudication record
+내경편_권04:648#2,내경편_권04:648,內景篇卷之四,大便,泄瀉諸證,寒泄,body,,9,完穀不化|自利|鶩溏|切痛|腹脹|雷鳴,,,自利|鶩溏,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:648#3,내경편_권04:648,內景篇卷之四,大便,泄瀉諸證,寒泄,body,,9,完穀不化|自利|鶩溏|切痛|腹脹|雷鳴,,,鶩溏,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:648#4,내경편_권04:648,內景篇卷之四,大便,泄瀉諸證,寒泄,body,,9,完穀不化|自利|鶩溏|切痛|腹脹|雷鳴,,,,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:653,내경편_권04:653,內景篇卷之四,大便,泄瀉諸證,寒泄,presc,附子溫中湯,6,水穀不化|泄瀉|腹痛,,腹痛,泄瀉|水穀不化,,D,adjudication record,寒濕,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:655,내경편_권04:655,內景篇卷之四,大便,泄瀉諸證,寒泄,presc,四柱散,3,滑泄|虛冷,,,滑泄,,D,adjudication record,脾腎陽虛|寒濕,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:657,내경편_권04:657,內景篇卷之四,大便,泄瀉諸證,寒泄,presc,六柱散,7,泄瀉|腹痛|臍腹痛|虛冷,,腹痛|臍腹痛,泄瀉,,D,adjudication record,脾腎陽虛|寒濕,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:669,내경편_권04:669,內景篇卷之四,大便,泄瀉諸證,暑泄,presc,淸六丸,5,泄瀉|熱泄|濕熱,,,泄瀉,,D,adjudication record,濕熱,"I-1b, I-2",2,adjudication record
+내경편_권04:674#1,내경편_권04:674,內景篇卷之四,大便,泄瀉諸證,火泄,body,,10,熱泄|腸鳴|腹中痛|腹痛|後重|稠粘,,,稠粘,,D,adjudication record,濕熱,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:674#2,내경편_권04:674,內景篇卷之四,大便,泄瀉諸證,火泄,body,,10,熱泄|腸鳴|腹中痛|腹痛|後重|稠粘,,腹中痛,,,D,adjudication record,,"I-1a, I-1b, I-1d, I-2",1,adjudication record
+내경편_권04:674#3,내경편_권04:674,內景篇卷之四,大便,泄瀉諸證,火泄,body,,10,熱泄|腸鳴|腹中痛|腹痛|後重|稠粘,,腹痛,,,D,adjudication record,,"I-1a, I-1b, I-1d, I-2",1,adjudication record
+내경편_권04:682#1,내경편_권04:682,內景篇卷之四,大便,泄瀉諸證,虛泄,body,,8,完穀不化|水穀不化|泄瀉|虛泄,,,,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:682#2,내경편_권04:682,內景篇卷之四,大便,泄瀉諸證,虛泄,body,,8,完穀不化|水穀不化|泄瀉|虛泄,,,完穀不化,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:682#3,내경편_권04:682,內景篇卷之四,大便,泄瀉諸證,虛泄,body,,8,完穀不化|水穀不化|泄瀉|虛泄,,,水穀不化,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:682#4,내경편_권04:682,內景篇卷之四,大便,泄瀉諸證,虛泄,body,,8,完穀不化|水穀不化|泄瀉|虛泄,,,泄瀉,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:682#5,내경편_권04:682,內景篇卷之四,大便,泄瀉諸證,虛泄,body,,8,完穀不化|水穀不化|泄瀉|虛泄,,,,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:687,내경편_권04:687,內景篇卷之四,大便,泄瀉諸證,虛泄,presc,升陽除濕湯,5,泄瀉|虛泄|不思飮食,,,泄瀉,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:689,내경편_권04:689,內景篇卷之四,大便,泄瀉諸證,虛泄,presc,參苓蓮朮散,4,泄瀉|虛泄,,,泄瀉,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:693,내경편_권04:693,內景篇卷之四,大便,泄瀉諸證,虛泄,presc,加味四君子湯,4,泄瀉|虛泄,,,泄瀉,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:702,내경편_권04:702,內景篇卷之四,大便,泄瀉諸證,滑泄,presc,禹餘粮丸,3,滑泄|虛寒,,,滑泄,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:706,내경편_권04:706,內景篇卷之四,大便,泄瀉諸證,滑泄,presc,實腸散,3,泄瀉|虛冷,,,泄瀉,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:708,내경편_권04:708,內景篇卷之四,大便,泄瀉諸證,滑泄,presc,萬全丸,4,久痢|泄瀉,,,泄瀉|久痢,久痢,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:711#1,내경편_권04:711,內景篇卷之四,大便,泄瀉諸證,飱泄,body,,5,木賊土|飱泄|雷鳴,,,飱泄,,D,adjudication record,,I-1b,2,adjudication record
+내경편_권04:711#2,내경편_권04:711,內景篇卷之四,大便,泄瀉諸證,飱泄,body,,5,木賊土|飱泄|雷鳴,,,飱泄,,D,adjudication record,,I-1b,2,adjudication record
+내경편_권04:711#3,내경편_권04:711,內景篇卷之四,大便,泄瀉諸證,飱泄,body,,5,木賊土|飱泄|雷鳴,,,飱泄,,D,adjudication record,肝脾不和,"I-1b, I-2",2,adjudication record
+내경편_권04:711#4,내경편_권04:711,內景篇卷之四,大便,泄瀉諸證,飱泄,body,,5,木賊土|飱泄|雷鳴,,,飱泄,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:711#5,내경편_권04:711,內景篇卷之四,大便,泄瀉諸證,飱泄,body,,5,木賊土|飱泄|雷鳴,,,飱泄,,D,adjudication record,,"I-1b, I-1d, I-2",2,adjudication record
+내경편_권04:721,내경편_권04:721,內景篇卷之四,大便,泄瀉諸證,飱泄,presc,八仙糕,3,泄瀉|脾胃虛,,,泄瀉,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:723,내경편_권04:723,內景篇卷之四,大便,泄瀉諸證,飱泄,presc,防風芍藥湯,4,腹痛|飱泄,,腹痛,飱泄,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:732,내경편_권04:732,內景篇卷之四,大便,泄瀉諸證,痰泄,presc,萬病二陳湯,4,泄瀉|濕泄,,,泄瀉|濕泄,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:735#1,내경편_권04:735,內景篇卷之四,大便,泄瀉諸證,食積泄,body,,12,抱壞雞子|瀉後痛減|泄瀉|腹痛|腹滿|食積,瀉後痛減,腹痛,抱壞雞子,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:735#2,내경편_권04:735,內景篇卷之四,大便,泄瀉諸證,食積泄,body,,12,抱壞雞子|瀉後痛減|泄瀉|腹痛|腹滿|食積,瀉後痛減,腹痛,,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:735#3,내경편_권04:735,內景篇卷之四,大便,泄瀉諸證,食積泄,body,,12,抱壞雞子|瀉後痛減|泄瀉|腹痛|腹滿|食積,,,,,D,adjudication record,氣滯,I-1b,2,adjudication record
+내경편_권04:735#4,내경편_권04:735,內景篇卷之四,大便,泄瀉諸證,食積泄,body,,12,抱壞雞子|瀉後痛減|泄瀉|腹痛|腹滿|食積,,,泄瀉,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:735#5,내경편_권04:735,內景篇卷之四,大便,泄瀉諸證,食積泄,body,,12,抱壞雞子|瀉後痛減|泄瀉|腹痛|腹滿|食積,,,,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:747#1,내경편_권04:747,內景篇卷之四,大便,泄瀉諸證,脾泄,body,,15,瀉去卽寬|脾泄|食後倒飽|泄瀉|腸澼|腎虛,,,脾泄,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:747#2,내경편_권04:747,內景篇卷之四,大便,泄瀉諸證,脾泄,body,,15,瀉去卽寬|脾泄|食後倒飽|泄瀉|腸澼|腎虛,瀉去卽寬|食後倒飽,,脾泄,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:747#3,내경편_권04:747,內景篇卷之四,大便,泄瀉諸證,脾泄,body,,15,瀉去卽寬|脾泄|食後倒飽|泄瀉|腸澼|腎虛,,,脾泄,,D,adjudication record,脾胃虛弱|脾腎陽虛,"I-1b, I-2",2,adjudication record
+내경편_권04:747#4,내경편_권04:747,內景篇卷之四,大便,泄瀉諸證,脾泄,body,,15,瀉去卽寬|脾泄|食後倒飽|泄瀉|腸澼|腎虛,,,脾泄|腸澼,不愈|經年,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:747#5,내경편_권04:747,內景篇卷之四,大便,泄瀉諸證,脾泄,body,,15,瀉去卽寬|脾泄|食後倒飽|泄瀉|腸澼|腎虛,,,脾泄,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:747#6,내경편_권04:747,內景篇卷之四,大便,泄瀉諸證,脾泄,body,,15,瀉去卽寬|脾泄|食後倒飽|泄瀉|腸澼|腎虛,,,脾泄,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:747#7,내경편_권04:747,內景篇卷之四,大便,泄瀉諸證,脾泄,body,,15,瀉去卽寬|脾泄|食後倒飽|泄瀉|腸澼|腎虛,,,脾泄|泄瀉,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:754,내경편_권04:754,內景篇卷之四,大便,泄瀉諸證,脾泄,presc,香砂六君子湯,3,脾泄,,,脾泄,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:756,내경편_권04:756,內景篇卷之四,大便,泄瀉諸證,脾泄,presc,吳茱萸湯,3,脾泄,,,脾泄,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:766#3,내경편_권04:766,內景篇卷之四,大便,泄瀉諸證,腎泄,body,,20,五更溏泄|脾腎泄|腎泄|晨泄|洞泄|溏泄|腹痛|虛泄|腎虛,,,,,D,adjudication record,脾胃虛弱|脾腎陽虛,"I-1b, I-2",2,adjudication record
+내경편_권04:766#5,내경편_권04:766,內景篇卷之四,大便,泄瀉諸證,腎泄,body,,20,五更溏泄|脾腎泄|腎泄|晨泄|洞泄|溏泄|腹痛|虛泄|腎虛,,腹痛,腎泄,,D,adjudication record,脾腎陽虛,"I-1a, I-1b, I-2",1,adjudication record
+내경편_권04:774,내경편_권04:774,內景篇卷之四,大便,泄瀉諸證,腎泄,presc,二神丸,3,虛泄|腎虛,,,,,D,adjudication record,脾胃虛弱|脾腎陽虛,"I-1b, I-2",2,adjudication record
+내경편_권04:779,내경편_권04:779,內景篇卷之四,大便,泄瀉諸證,腎泄,presc,猪臟丸,5,泄瀉|虛泄|腎虛,,,泄瀉,,D,adjudication record,脾胃虛弱|脾腎陽虛,"I-1b, I-2",2,adjudication record
+내경편_권04:781,내경편_권04:781,內景篇卷之四,大便,泄瀉諸證,腎泄,presc,三神丸,7,泄瀉|虛泄|脾胃虛|腎虛|虛寒,,,泄瀉,,D,adjudication record,脾胃虛弱|脾腎陽虛|寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:784,내경편_권04:784,內景篇卷之四,大便,泄瀉諸證,腎泄,presc,六神湯,4,泄瀉|虛泄,,,泄瀉,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:789,내경편_권04:789,內景篇卷之四,大便,泄瀉諸證,腎泄,presc,木香散,6,脾腎泄|腎泄,,,脾腎泄|腎泄,,D,adjudication record,脾腎陽虛,"I-1b, I-2",2,adjudication record
+내경편_권04:800#1,내경편_권04:800,內景篇卷之四,大便,泄瀉諸證,久泄,body,,11,下利|久泄|木剋土|洞泄|腸澼|腹脹,,,下利,,D,adjudication record,,I-1b,2,adjudication record
+내경편_권04:800#2,내경편_권04:800,內景篇卷之四,大便,泄瀉諸證,久泄,body,,11,下利|久泄|木剋土|洞泄|腸澼|腹脹,,,久泄,久泄|久瀉,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:800#3,내경편_권04:800,內景篇卷之四,大便,泄瀉諸證,久泄,body,,11,下利|久泄|木剋土|洞泄|腸澼|腹脹,,,久泄,久泄,D,adjudication record,,I-1b,2,adjudication record
+내경편_권04:800#4,내경편_권04:800,內景篇卷之四,大便,泄瀉諸證,久泄,body,,11,下利|久泄|木剋土|洞泄|腸澼|腹脹,,,,久不,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:800#5,내경편_권04:800,內景篇卷之四,大便,泄瀉諸證,久泄,body,,11,下利|久泄|木剋土|洞泄|腸澼|腹脹,,,久泄,久泄,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:800#6,내경편_권04:800,內景篇卷之四,大便,泄瀉諸證,久泄,body,,11,下利|久泄|木剋土|洞泄|腸澼|腹脹,,,久泄|洞泄|腸澼,久泄,D,adjudication record,肝脾不和|寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:800#7,내경편_권04:800,內景篇卷之四,大便,泄瀉諸證,久泄,body,,11,下利|久泄|木剋土|洞泄|腸澼|腹脹,,,久泄|腸澼,久泄,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:1165,내경편_권04:1165,內景篇卷之四,大便,飯後隨卽大便,,body,,5,飯後隨卽|飱泄,飯後隨卽,,飱泄,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:1167#1,내경편_권04:1167,內景篇卷之四,大便,大便秘結,,body,,17,脾約|便秘|大便燥|大便秘|燥結|秘澁|不能食|實秘|氣滯|虛秘,,,,,C,adjudication record,脾胃虛弱,"I-1c, I-2",2,adjudication record
+내경편_권04:1167#3,내경편_권04:1167,內景篇卷之四,大便,大便秘結,,body,,17,脾約|便秘|大便燥|大便秘|燥結|秘澁|不能食|實秘|氣滯|虛秘,,,,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1167#4,내경편_권04:1167,內景篇卷之四,大便,大便秘結,,body,,17,脾約|便秘|大便燥|大便秘|燥結|秘澁|不能食|實秘|氣滯|虛秘,,,便秘|大便秘|燥結|秘澁,,C,adjudication record,大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1167#5,내경편_권04:1167,內景篇卷之四,大便,大便秘結,,body,,17,脾約|便秘|大便燥|大便秘|燥結|秘澁|不能食|實秘|氣滯|虛秘,,,脾約|實秘|虛秘,,C,adjudication record,脾胃虛弱|大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1167#6,내경편_권04:1167,內景篇卷之四,大便,大便秘結,,body,,17,脾約|便秘|大便燥|大便秘|燥結|秘澁|不能食|實秘|氣滯|虛秘,,,,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1167#7,내경편_권04:1167,內景篇卷之四,大便,大便秘結,,body,,17,脾約|便秘|大便燥|大便秘|燥結|秘澁|不能食|實秘|氣滯|虛秘,,,便秘|大便燥|大便秘,,C,adjudication record,大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1167#8,내경편_권04:1167,內景篇卷之四,大便,大便秘結,,body,,17,脾約|便秘|大便燥|大便秘|燥結|秘澁|不能食|實秘|氣滯|虛秘,,,,,C,adjudication record,大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1167#9,내경편_권04:1167,內景篇卷之四,大便,大便秘結,,body,,17,脾約|便秘|大便燥|大便秘|燥結|秘澁|不能食|實秘|氣滯|虛秘,,,,,C,adjudication record,氣滯|大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1179,내경편_권04:1179,內景篇卷之四,大便,大便秘結,,presc,大黃牽牛散,6,便秘|大便秘|大便秘結,,,便秘|大便秘|大便秘結,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1181,내경편_권04:1181,內景篇卷之四,大便,大便秘結,,presc,半硫丸,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1183,내경편_권04:1183,內景篇卷之四,大便,大便秘結,,presc,七宣丸,6,便秘|大便秘|大便秘結,,,便秘|大便秘|大便秘結,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1187,내경편_권04:1187,內景篇卷之四,大便,大便秘結,,presc,當歸潤燥湯,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1191,내경편_권04:1191,內景篇卷之四,大便,大便秘結,,presc,皂角元,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1195,내경편_권04:1195,內景篇卷之四,大便,大便秘結,,presc,潤腸丸,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1204,내경편_권04:1204,內景篇卷之四,大便,大便秘結,,presc,小麻仁丸,6,便秘|大便秘|大便秘結,,,便秘|大便秘|大便秘結,,C,adjudication record,大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1208,내경편_권04:1208,內景篇卷之四,大便,大便秘結,,presc,和血潤腸湯,4,大便燥|燥結,,,大便燥|燥結,,C,adjudication record,大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1210,내경편_권04:1210,內景篇卷之四,大便,大便秘結,,presc,參仁丸,4,便秘|大便秘,,,便秘|大便秘,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1212,내경편_권04:1212,內景篇卷之四,大便,大便秘結,,presc,搜風潤腸丸,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1214,내경편_권04:1214,內景篇卷之四,大便,大便秘結,,presc,三和湯,7,便秘|大便秘|秘澁|氣滯,,,便秘|大便秘|秘澁,,C,adjudication record,氣滯,"I-1c, I-2",2,adjudication record
+내경편_권04:1216,내경편_권04:1216,內景篇卷之四,大便,大便秘結,,presc,四磨湯,7,便秘|大便秘|秘澁|氣滯,,,便秘|大便秘|秘澁,,C,adjudication record,氣滯,"I-1c, I-2",2,adjudication record
+내경편_권04:1218,내경편_권04:1218,內景篇卷之四,大便,大便秘結,,presc,六磨湯,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1228,내경편_권04:1228,內景篇卷之四,大便,老人秘結,,presc,疏風順氣元,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,氣滯|大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1238,내경편_권04:1238,內景篇卷之四,大便,老人秘結,,presc,黃芪湯,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1240,내경편_권04:1240,內景篇卷之四,大便,老人秘結,,presc,膠蜜湯,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1245,내경편_권04:1245,內景篇卷之四,大便,老人秘結,,presc,三仁粥,6,便秘|大便秘|大便秘結,,,便秘|大便秘|大便秘結,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1248#2,내경편_권04:1248,內景篇卷之四,大便,脾約證,,body,,9,脾約|便秘|大便秘|大便難,,,脾約|便秘|大便秘|大便難,,C,adjudication record,脾胃虛弱|大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1250,내경편_권04:1250,內景篇卷之四,大便,脾約證,,presc,脾約丸,5,脾約|大便難,,,脾約|大便難,,C,adjudication record,大腸燥結,"I-1c, I-2",2,adjudication record
+내경편_권04:1253#1,내경편_권04:1253,內景篇卷之四,大便,大便不通,,body,,20,脾約|便秘|大便不通|大便秘|大便秘結|大便閉|大便難|秘澁|宿食|脹滿|腹脹,,,脾約|便秘|大便秘|大便秘結|秘澁,,C,adjudication record,氣滯|大腸燥結,"I-1c, I-2",1,adjudication record
+내경편_권04:1253#2,내경편_권04:1253,內景篇卷之四,大便,大便不通,,body,,20,脾約|便秘|大便不通|大便秘|大便秘結|大便閉|大便難|秘澁|宿食|脹滿|腹脹,,,大便不通,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1253#3,내경편_권04:1253,內景篇卷之四,大便,大便不通,,body,,20,脾約|便秘|大便不通|大便秘|大便秘結|大便閉|大便難|秘澁|宿食|脹滿|腹脹,,,大便閉,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1253#4,내경편_권04:1253,內景篇卷之四,大便,大便不通,,body,,20,脾約|便秘|大便不通|大便秘|大便秘結|大便閉|大便難|秘澁|宿食|脹滿|腹脹,,,大便難,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1253#5,내경편_권04:1253,內景篇卷之四,大便,大便不通,,body,,20,脾約|便秘|大便不通|大便秘|大便秘結|大便閉|大便難|秘澁|宿食|脹滿|腹脹,,,大便不通,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1260,내경편_권04:1260,內景篇卷之四,大便,大便不通,,presc,脾積元,7,便秘|大便秘|大便秘結|腹脹,,,便秘|大便秘|大便秘結,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1264,내경편_권04:1264,內景篇卷之四,大便,大便不通,,presc,潤腸湯,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,久不,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1284,내경편_권04:1284,內景篇卷之四,大便,大小便不通,,presc,推氣丸,6,便秘|大便秘|秘澁,,,便秘|大便秘|秘澁,,C,adjudication record,,"I-1c, I-2",2,adjudication record
+내경편_권04:1338,내경편_권04:1338,內景篇卷之四,大便,單方,,presc,蒼朮,4,泄瀉|濕泄,,,泄瀉|濕泄,,D,adjudication record,寒濕,"I-1b, I-2",2,adjudication record
+내경편_권04:1348,내경편_권04:1348,內景篇卷之四,大便,單方,,presc,白芍藥,6,下痢|泄瀉|痢疾,,,下痢|泄瀉|痢疾,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+내경편_권04:1381,내경편_권04:1381,內景篇卷之四,大便,單方,,presc,五倍子,4,泄瀉|虛泄,,,泄瀉,,D,adjudication record,脾胃虛弱,"I-1b, I-2",2,adjudication record
+내경편_권04:1426,내경편_권04:1426,內景篇卷之四,大便,單方,,presc,生脂麻油,3,大便不通|熱秘,,,大便不通|熱秘,,C,adjudication record,大腸燥結,"I-1c, I-2",2,adjudication record
+외형편_권03:706#3,외형편_권03:706,外形篇卷之三,腹,腹痛有六,食積腹痛,body,,3,腹痛|食積,,,,,D,adjudication record,氣滯,"I-1a, I-2",1,adjudication record
+외형편_권03:714,외형편_권03:714,外形篇卷之三,腹,腹痛有六,食積腹痛,presc,利氣丸,6,便秘|秘澁|氣滯|食積,,,便秘|秘澁,,C,adjudication record,氣滯,"I-1c, I-2",2,adjudication record
+외형편_권03:731#4,외형편_권03:731,外形篇卷之三,腹,腹痛有虛實,,body,,6,小腹痛|腹痛|腎虛|虛寒,,腹痛,,,M,adjudication record,,"I-1a, I-2",1,adjudication record
+외형편_권03:744#2,외형편_권03:744,外形篇卷之三,腹,腹痛嘔泄,,body,,4,下利|腹痛,,腹痛,,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+외형편_권03:744#5,외형편_권03:744,外形篇卷之三,腹,腹痛嘔泄,,body,,4,下利|腹痛,,腹痛,,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+외형편_권03:826#3,외형편_권03:826,外形篇卷之三,腹,鍼灸法,,body,,9,溏泄|腹中切痛|腹痛|臍腹痛|切痛,,,溏泄,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+잡병편_권01:97,잡병편_권01:97,雜病篇 卷之一,天地運氣,六壬年發生之紀,,body,,4,腸鳴|飱泄,,,飱泄,,D,adjudication record,,"I-1b, I-1d, I-2",2,adjudication record
+잡병편_권01:105,잡병편_권01:105,雜病篇 卷之一,天地運氣,六丁年委和之紀,,body,,8,小腹痛|溏泄|腸鳴|腹痛,,小腹痛|腹痛,溏泄,,D,adjudication record,,"I-1b, I-1d, I-2",2,adjudication record
+잡병편_권01:362#1,잡병편_권01:362,雜病篇 卷之一,辨證,陰陽生病,,body,,7,腸鳴|飱泄|寒濕|腹脹|賁響,,,飱泄,,D,adjudication record,肝脾不和,"I-1b, I-2",2,adjudication record
+잡병편_권01:413,잡병편_권01:413,雜病篇 卷之一,辨證,便寒便熱,,body,,9,小腹痛|腸鳴|腹痛|飱泄|腹脹,,小腹痛|腹痛,飱泄,,D,adjudication record,寒濕,"I-1b, I-1d, I-2",2,adjudication record
+잡병편_권02:998#1,잡병편_권02:998,雜病篇卷之二,寒 上,太陰形證用藥,,body,,6,腹痛|自利|腹滿|虛寒,,,自利,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+잡병편_권02:998#3,잡병편_권02:998,雜病篇卷之二,寒 上,太陰形證用藥,,body,,6,腹痛|自利|腹滿|虛寒,,腹痛,自利,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+잡병편_권02:998#4,잡병편_권02:998,雜病篇卷之二,寒 上,太陰形證用藥,,body,,6,腹痛|自利|腹滿|虛寒,,,,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+잡병편_권02:998#7,잡병편_권02:998,雜病篇卷之二,寒 上,太陰形證用藥,,body,,6,腹痛|自利|腹滿|虛寒,,,自利,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+잡병편_권02:1010#1,잡병편_권02:1010,雜病篇卷之二,寒 上,太陰形證用藥,太陰病腹脹滿,body,,4,下利|脹滿|腹脹,,,下利,,D,adjudication record,,"I-1b, I-2",2,adjudication record
+잡병편_권02:1016,잡병편_권02:1016,雜病篇卷之二,寒 上,太陰形證用藥,太陰病發黃,presc,理中湯,4,腹痛|自利,,腹痛,自利,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+잡병편_권02:1020,잡병편_권02:1020,雜病篇卷之二,寒 上,太陰形證用藥,太陰病發黃,presc,四順理中湯,4,腹痛|自利,,腹痛,自利,,D,adjudication record,,"I-1a, I-1b, I-2",1,adjudication record
+잡병편_권03:508,잡병편_권03:508,雜病篇卷之三,寒 下,痼冷,,presc,衝寒散,10,痛泄|腹痛泄瀉|泄瀉|腹痛,痛泄|腹痛泄瀉,腹痛,泄瀉,,D,adjudication record,肝脾不和,"I-1a, I-1b, I-2",1,adjudication record
+잡병편_권03:833#1,잡병편_권03:833,雜病篇卷之三,濕,濕乃水氣,,body,,4,濡泄|濕熱|脹滿,,,濡泄,,D,adjudication record,寒濕|濕熱,"I-1b, I-2",2,adjudication record
+잡병편_권04:367,잡병편_권04:367,雜病篇卷之四,內傷,"內傷病, 始爲熱中, 終爲寒中",,presc,守中金元,7,腸鳴|自利|不思飮食|脾胃虛|虛冷,,,自利,,D,adjudication record,脾胃虛弱|寒濕,"I-1b, I-1d, I-2",1,adjudication record
