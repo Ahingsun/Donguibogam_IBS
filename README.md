@@ -75,7 +75,8 @@ and tier 2 otherwise.
 | `20`–`22` | Comparison with the KIOM monographs and with the ranking of the submitted manuscript |
 | `30`–`32` | Formulas and their scores, overall and by bowel habit and pattern |
 | `40`–`41` | Acupuncture and moxibustion statements and the points they name |
-| `fig1`–`fig3` | Figures 1 to 3 |
+| `fig1`, `fig2` | Figures 1 and 2 |
+| `fig3` | Supplementary Figure S1 |
 | `manifest.json`, `run_log.txt` | Checksums of the source files, inputs and code, library versions, seeds, counts and the log of the run |
 | `결과요약_R1.xlsx` | All CSV outputs in one workbook |
 
