@@ -70,6 +70,15 @@ def prescription_table(final_units, all_units, composer, herb_scores, annotation
         u = it["entry"]
         raw, how = composer.composition(u)
         comp = [(h, d) for h, d in raw if composer.kind.get(h) in ("herb", "other")]
+        if u["CC"].replace(" ", "") == "單方":
+            # a single-herb remedy is headed by its herb, which the entry need not repeat; other herbs it names are
+            # alternatives to combine with (蒼朮 或合茯苓, 或合芍藥), not constituents
+            own = composer.lex["alias2canon"].get(u["name"], u["name"])
+            if composer.kind.get(own) == "herb":
+                others = [h for h, _ in comp if h != own]
+                comp = [(own, next((d for h, d in comp if h == own), None))]
+                if others:
+                    how = (how + "; " if how else "") + "may be combined with " + ", ".join(others)
         if not comp:
             continue
         scored = [(h, d) for h, d in comp if h in herb_scores]

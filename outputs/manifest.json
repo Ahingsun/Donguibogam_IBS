@@ -1,6 +1,6 @@
 {
  "version": "R1-2026-10-04",
- "run_started": "2026-10-27T18:49:32",
+ "run_started": "2026-10-27T22:32:08",
  "status": "FINAL (all decisions from the adjudication record)",
  "python": "3.14.7",
  "platform": "Windows-11-10.0.26200-SP0",
@@ -83,14 +83,14 @@
   "src\\corpus.py": "9207ac1f0e6a2846d2eb0dce139891f3",
   "src\\d2.py": "157d62a243c0eec93cb50b92e3a39820",
   "src\\features.py": "4491d56ce0296971537e75cdf944baea",
-  "src\\figures.py": "85b559518a6d9756c0033c9989a180a1",
+  "src\\figures.py": "5a69f7087f4aedfb8cfe81c59b1088cc",
   "src\\lexicon.py": "0610a3864c3d83cfb2c2af105c1449c9",
-  "src\\prescriptions.py": "f686d81e8e4acba9516d877a647ce4b6",
+  "src\\prescriptions.py": "8047ce44280bb17eccba5d7029862a86",
   "src\\screen.py": "447408c75da5f091e613954bd2a27a42",
-  "src\\sensitivity.py": "c1aedba12845482b72463cc5da7171c9",
+  "src\\sensitivity.py": "c5dec1ea8b0d38b70f1b510f24dc08b4",
   "src\\statements.py": "e87d8872b379c4a1b6cc7e9b2ac56657",
   "src\\stats.py": "b53c5b0c65d269b356b87f1c51a2fe23",
-  "run_all.py": "166f370e1342cc06e89f764ec77de77a"
+  "run_all.py": "c3e9a9cfe6d6ab4920fef3ff4bc3e077"
  },
  "seeds": {
   "random_seeds": [

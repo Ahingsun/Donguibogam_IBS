@@ -41,7 +41,8 @@ def flow(counts, out):
     n_units = counts.get("adjudicated_units", counts["adjudicated"])
     mx, sx = 0.36, 0.84                  # centres of the main column and of the side column
     boxes = [
-        (mx, 0.92, f"Clinical chapters of Donguibogam\n(Naegyeong, Oehyeong, Japbyeong)\nn = {counts['units']:,} passages"),
+        (mx, 0.92, f"Clinical chapters of Donguibogam\n(Internal Medicine, External Medicine,\nMiscellaneous Diseases)\n"
+                   f"n = {counts['units']:,} passages"),
         (mx, 0.72, f"Keyword score ≥ {counts['threshold']}\nn = {counts['candidates']}"),
         (mx, 0.51, f"After the exclusion filter\nn = {counts['adjudicated']} passages" +
          (f"\n({div} divided at source citations:\n{n_units} adjudication units)" if div else "")),
@@ -54,13 +55,14 @@ def flow(counts, out):
         (sx, 0.62, f"Excluded by filter\nn = {counts['filtered']}"),
         (sx, 0.40, f"Excluded at adjudication\nn = {n_units - counts['included']}" + (" units" if div else "")),
     ]
-    for x, y, t in boxes:
-        ax.text(x, y, t, ha="center", va="center", fontsize=10,
-                bbox=dict(boxstyle="round,pad=0.5", fc="white", ec="black"))
+    main_text = [ax.text(x, y, t, ha="center", va="center", fontsize=10,
+                         bbox=dict(boxstyle="round,pad=0.5", fc="white", ec="black")) for x, y, t in boxes]
     side_text = [ax.text(x, y, t, ha="center", va="center", fontsize=9,
                          bbox=dict(boxstyle="round,pad=0.4", fc="#F2F2F2", ec="gray")) for x, y, t in side]
-    for (x0, y0, _), (x1, y1, _) in zip(boxes[:-1], boxes[1:]):
-        ax.annotate("", xy=(x1, y1 + 0.06), xytext=(x0, y0 - 0.07), arrowprops=dict(arrowstyle="->"))
+    for a, b in zip(main_text[:-1], main_text[1:]):
+        # from the bottom edge of one box to the top edge of the next (coordinates relative to the boxes)
+        ax.annotate("", xy=(0.5, 1), xycoords=b, xytext=(0.5, 0), textcoords=a,
+                    arrowprops=dict(arrowstyle="->", shrinkA=6, shrinkB=6))
     for (x, _, _), (_, sy, _), st in zip(boxes[:-1], side, side_text):
         # the arrow ends at the left edge of the side box (coordinates relative to the box)
         ax.annotate("", xy=(0, 0.5), xycoords=st, xytext=(x, sy), textcoords="data",
@@ -75,10 +77,11 @@ def flow(counts, out):
 
 
 def contributions(base_rows, out, top=20, labels=None):
+    """Herbs ranked top-th or higher, herbs tied at the boundary included."""
     _font()
     lab = labels or {}
-    ranked = sorted(base_rows, key=lambda r: (r["rank"], r["herb"]))[:top][::-1]
-    fig, ax = plt.subplots(figsize=(7.5, 0.32 * top + 1.2))
+    ranked = [r for r in sorted(base_rows, key=lambda r: (r["rank"], r["herb"])) if r["rank"] <= top][::-1]
+    fig, ax = plt.subplots(figsize=(7.5, 0.32 * len(ranked) + 1.2))
     left = [0.0] * len(ranked)
     for k in KEYS:
         vals = [r["w" + k] for r in ranked]

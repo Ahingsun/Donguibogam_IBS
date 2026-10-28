@@ -344,7 +344,7 @@ def main():
     figures.flow(counts, out("fig1_flow.png"))
     labels = figures.latin_labels()
     figures.contributions(base, out("fig2_component_contributions.png"), labels=labels)
-    top = [r["herb"] for r in base[:20]]
+    top = [r["herb"] for r in sorted(base, key=lambda r: (r["rank"], r["herb"])) if r["rank"] <= 20]  # ties included
     figures.rank_stability(rank_table, top, out("fig3_rank_stability.png"), labels=labels)
 
     # ---------------------------------------------------------------- summary workbook + manifest

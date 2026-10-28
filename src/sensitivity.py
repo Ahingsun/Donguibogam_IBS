@@ -140,14 +140,15 @@ def design_matrix(rows):
 
 
 def contributions(base_rows, tops=(10, 20)):
+    """Weighted components of the herbs ranked t-th or higher; herbs tied at the boundary are all included."""
     out = []
     ranked = sorted(base_rows, key=lambda r: (r["rank"], r["herb"]))
     for t in tops:
-        sub = ranked[:t]
+        sub = [r for r in ranked if r["rank"] <= t]
         tot = sum(r["score"] for r in sub)
         for k in KEYS:
             v = [r["w" + k] for r in sub]
-            out.append(dict(top=t, component=k, mean=round(float(np.mean(v)), 2), min=round(float(np.min(v)), 2),
+            out.append(dict(top=t, n_herbs=len(sub), component=k, mean=round(float(np.mean(v)), 2), min=round(float(np.min(v)), 2),
                             max=round(float(np.max(v)), 2), share_of_total=round(sum(v) / tot, 3) if tot else ""))
     return out
 
