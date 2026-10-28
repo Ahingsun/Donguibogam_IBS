@@ -1,6 +1,6 @@
 {
  "version": "R1-2026-10-04",
- "run_started": "2026-10-26T21:16:50",
+ "run_started": "2026-10-27T18:49:32",
  "status": "FINAL (all decisions from the adjudication record)",
  "python": "3.14.7",
  "platform": "Windows-11-10.0.26200-SP0",
@@ -65,6 +65,7 @@
   "data\\exclusion_terms.csv": "7197c272b2de9c66fdeeebc234206c4c",
   "data\\herb_aliases.csv": "b4747a2c245d73b3537e2536c40d2ebd",
   "data\\herb_latin_names.csv": "14d089d786d4771265e937ef0bf1c345",
+  "data\\latin_names.csv": "a11f0f62670e1f31e6d5745136cf53d7",
   "data\\meridian_sources.csv": "2f563cff5371a79055034f105ee05ead",
   "data\\pattern_terms.csv": "e3e258744ba16c4406000d1f83c6ffc4",
   "data\\screening_dictionary.csv": "c3235d7d275389b111a5668770e35466",
@@ -82,14 +83,14 @@
   "src\\corpus.py": "9207ac1f0e6a2846d2eb0dce139891f3",
   "src\\d2.py": "157d62a243c0eec93cb50b92e3a39820",
   "src\\features.py": "4491d56ce0296971537e75cdf944baea",
-  "src\\figures.py": "4d3e01b58e315bddf74b421b01c5d789",
+  "src\\figures.py": "85b559518a6d9756c0033c9989a180a1",
   "src\\lexicon.py": "0610a3864c3d83cfb2c2af105c1449c9",
   "src\\prescriptions.py": "f686d81e8e4acba9516d877a647ce4b6",
   "src\\screen.py": "447408c75da5f091e613954bd2a27a42",
   "src\\sensitivity.py": "c1aedba12845482b72463cc5da7171c9",
   "src\\statements.py": "e87d8872b379c4a1b6cc7e9b2ac56657",
   "src\\stats.py": "b53c5b0c65d269b356b87f1c51a2fe23",
-  "run_all.py": "a48ea78cd4143fa1783f36a0ae7dc284"
+  "run_all.py": "166f370e1342cc06e89f764ec77de77a"
  },
  "seeds": {
   "random_seeds": [

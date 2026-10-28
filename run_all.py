@@ -342,9 +342,10 @@ def main():
                   tier1_passages=len({statements.parent_of(d) for d in t1_ids}), tier2_weight=w2,
                   note="" if n_prov == 0 else f"Provisional: {n_prov} adjudication decisions not yet entered by the researcher")
     figures.flow(counts, out("fig1_flow.png"))
-    figures.contributions(base, out("fig2_component_contributions.png"))
+    labels = figures.latin_labels()
+    figures.contributions(base, out("fig2_component_contributions.png"), labels=labels)
     top = [r["herb"] for r in base[:20]]
-    figures.rank_stability(rank_table, top, out("fig3_rank_stability.png"))
+    figures.rank_stability(rank_table, top, out("fig3_rank_stability.png"), labels=labels)
 
     # ---------------------------------------------------------------- summary workbook + manifest
     wb = openpyxl.Workbook()
