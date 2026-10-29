@@ -2,8 +2,8 @@
 patterns,(none),1,苓朮湯,recommended in an IBS passage,65.27,65.27,65.27,10,잡병편_권01:98,17
 patterns,(none),2,四順理中湯,recorded in an IBS passage,56.27,56.27,56.27,34,잡병편_권02:1020,17
 patterns,(none),3,黃芪湯,recorded in an IBS passage,50.21,50.21,50.21,47,내경편_권04:1238,17
-patterns,(none),4,大柴胡湯,recommended in an IBS passage,49.81,49.81,49.03,48,잡병편_권02:1217,17
-patterns,(none),5,推氣丸,recorded in an IBS passage,49.02,49.02,,49,내경편_권04:1284,17
+patterns,(none),4,推氣丸,recorded in an IBS passage,49.02,49.02,,48,내경편_권04:1284,17
+patterns,(none),5,大承氣湯,recommended in an IBS passage,48.6,48.6,48.01,49,잡병편_권02:1212,17
 patterns,大腸燥結,1,厚朴湯,recommended in an IBS passage,61.75,61.75,65.37,17,내경편_권04:1185,31
 patterns,大腸燥結,2,七宣丸,recorded in an IBS passage,60.4,60.4,,21,내경편_권04:1183,31
 patterns,大腸燥結,3,脾約丸,recorded in an IBS passage,57.17,57.17,59.83,30,내경편_권04:1250,31
@@ -23,11 +23,11 @@ patterns,濕熱,1,三白湯,recommended in an IBS passage,71.9,71.9,77.35,2,내�
 patterns,濕熱,2,燥濕湯,recommended in an IBS passage,70.52,70.52,75.78,5,내경편_권04:619,12
 patterns,濕熱,3,治中湯,recommended in an IBS passage,58.0,58.0,,24,잡병편_권02:1024,12
 patterns,濕熱,4,理中湯,recorded in an IBS passage,56.27,56.27,57.93,35,잡병편_권02:1016,12
-patterns,濕熱,5,萬病四苓散,recommended in an IBS passage,53.68,53.68,54.16,40,내경편_권04:677,12
+patterns,濕熱,5,萬病四苓散,recommended in an IBS passage,53.68,53.68,54.16,39,내경편_권04:677,12
 patterns,肝脾不和,1,實腸散,recorded in an IBS passage,71.26,71.26,72.33,3,내경편_권03:905,16
 patterns,肝脾不和,2,衝寒散,recorded in an IBS passage,57.87,57.87,60.7,26,잡병편_권03:508,16
 patterns,肝脾不和,3,加減木香散,recommended in an IBS passage,56.85,62.02,59.0,33,내경편_권04:718,16
-patterns,肝脾不和,4,除濕健脾湯,recommended in an IBS passage,54.43,54.43,59.64,39,내경편_권04:814,16
+patterns,肝脾不和,4,除濕健脾湯,recommended in an IBS passage,53.41,53.41,58.98,40,내경편_권04:814,16
 patterns,肝脾不和,5,厚朴枳實湯,recommended in an IBS passage,52.72,61.51,65.26,42,내경편_권04:810,16
 patterns,脾胃虛弱,1,固中丸,recommended in an IBS passage,73.59,73.59,73.59,1,내경편_권04:760,49
 patterns,脾胃虛弱,2,三白湯,recommended in an IBS passage,71.9,71.9,77.35,2,내경편_권04:616,49

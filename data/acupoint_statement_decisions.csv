@@ -1,0 +1,29 @@
+﻿unit_id,statement_no,points,indication_en,decision,codes,r4_pain,record_unit,basis,reviewed
+내경편_권04:1491,1,大椎,"great thirst, the water drunk passing straight out as diarrhea",included,I-1b,N,,"diarrhea as main content, as unit 32-6 (thirst with watery diarrhea, included)","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,2,百會,diarrhea unhealed for three to five years,included,I-1b,N,,chronic diarrhea,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,3,天樞|氣海,chronic diarrhea and dysentery (泄痢),included,I-1b,N,,"diarrhea with dysentery named alongside and no blood, as units that mention dysentery within a diarrhea context","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,4,神闕|關元,unceasing diarrhea and dysentery (泄痢),included,I-1b,N,,"diarrhea with dysentery named alongside and no blood, as units that mention dysentery within a diarrhea context","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,5,神闕|三陰交,loose stools (溏泄),included,I-1b,N,,diarrhea,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,6,脾腧|神闕|關元,diarrhea and dysentery (泄痢),included,I-1b,N,,"diarrhea with dysentery named alongside and no blood, as units that mention dysentery within a diarrhea context","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,7,陰陵泉|然谷|上巨虛|太衝,diarrhea with undigested food (飱泄),included,I-1b,N,,diarrhea,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,8,氣海,"watery diarrhea with cold limbs, a vanishing pulse, navel pain and worsening shortness of breath",excluded,E-3,,,"a critical acute state (collapse), not a functional bowel symptom","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,9,關元|復溜|小腸腧|天樞|腹哀,dysentery with abdominal pain and pus and blood in the stool,excluded,E-1,,,blood in the stool,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,10,關元|窮谷,cold dysentery (冷痢),excluded,E-1,,,dysentery,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,11,合谷|外關,tenesmus (裏急後重),excluded,E-1,,,"tenesmus alone, within the run of dysentery statements; tenesmus supports but does not establish a bowel-habit change (I-1d)","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,12,合谷|足三里|陰陵泉|中脘|關元|天樞|神闕|中極,unceasing dysentery (痢不止),excluded,E-1,,,dysentery,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,13,大都|商丘|陰陵泉,all kinds of dysentery (諸下痢),excluded,E-1,,,"dysentery, within the run of dysentery statements","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,14,照海|支溝|太白,constipation (大便秘澁),included,I-1c,N,,constipation,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,15,三間|承山|太白|太鍾|足三里|湧泉|崑崙|照海|章門|氣海,no bowel movement (大便不通),included,I-1c,N,,constipation,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,16,大都|環岡|水道,retention of urine and stool (大小便不通),included,I-1c,N,,"constipation with urinary retention and no other disease named, as unit 163 (included)","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+내경편_권04:1491,17,氣海|足三里|關元|三陰交|陰谷,postpartum distension with retention of urine and stool,excluded,E-1,,,the postpartum period,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+외형편_권03:826,1,內關|支溝|照海|巨闕|足三間,abdominal pain (腹痛),excluded,E-6,,외형편_권03:826#1,decision of the adjudicated unit,yes
+외형편_권03:826,2,陰陵泉|太衝|足三里|支溝|中脘|關元|天樞|公孫|三陰交|陰谷,pain around the navel (臍腹痛),excluded,E-6,,외형편_권03:826#2,decision of the adjudicated unit,yes
+외형편_권03:826,3,公孫,cutting pain in the abdomen (腹中切痛),excluded,E-6,,외형편_권03:826#2,decision of the adjudicated unit,yes
+외형편_권03:826,4,神闕,"pain in the navel with loose stools (臍中痛, 溏泄)",included,"I-1a, I-1b",Y,외형편_권03:826#3,decision of the adjudicated unit (tier 1),yes
+외형편_권03:826,5,獨陰,severe pain around the navel (臍腹痛甚),excluded,E-6,,외형편_권03:826#4,decision of the adjudicated unit,yes
+잡병편_권04:658,1,中脘,"poor intake, distension of the chest and abdomen and a sallow face",excluded,E-4,,잡병편_권04:658#3,decision of the adjudicated unit,yes
+침구편_권01:1574,1,長谷,diarrhea and dysentery (泄痢) with no desire to eat,included,I-1b,N,,"diarrhea with dysentery named alongside and no blood, as units that mention dysentery within a diarrhea context","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+침구편_권01:1576,1,下腰,diarrhea and dysentery with pus and blood in the stool,excluded,E-1,,,blood in the stool,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+침구편_권01:1578,1,腸遶,constipation (大便閉),included,I-1c,N,,constipation,"yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+침구편_권01:1580,1,環岡,retention of urine and stool (大小便不通),included,I-1c,N,,"constipation with urinary retention and no other disease named, as unit 163 (included)","yes (2026-10-28, 경혈조문_판정검토.xlsx)"
+침구편_권01:1586,1,獨陰,"pain of the heart and abdomen and of hernia, as if dying",excluded,E-6,,,abdominal pain without a change in bowel habit (and hernia pain),"yes (2026-10-28, 경혈조문_판정검토.xlsx)"

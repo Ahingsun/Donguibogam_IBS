@@ -20,12 +20,13 @@ Put the 23 files in `source_texts/`, or set the environment variable `DONGUIBOGA
 
 ```
 python -m pip install -r requirements.txt
-python run_all.py            # screening, adjudication record, herb index, sensitivity analyses, formulas, acupoints, figures
 python run_d2.py analyze     # independent rating: agreement, precision and recall
+python run_all.py            # screening, adjudication record, herb index, sensitivity analyses, formulas, acupoints, figures
 ```
 
-`run_all.py` rewrites `outputs/` and takes about a minute. `run_d2.py analyze` writes `d2/d2_summary.json` and
-`d2/d2_per_unit.csv`. The files in this repository were produced with Python 3.14.7, NumPy 2.5.3, openpyxl 3.1.5 and
+`run_d2.py analyze` writes `d2/d2_summary.json` and `d2/d2_per_unit.csv`. `run_all.py` rewrites `outputs/`, takes about
+a minute and reads `d2/d2_per_unit.csv` for the two sensitivity corpora that add the units both raters judged
+relevant, so it runs second. The files in this repository were produced with Python 3.14.7, NumPy 2.5.3, openpyxl 3.1.5 and
 Matplotlib 3.11.2, and running the two scripts on the same 23 files reproduces them. Columns that would quote the
 source text are left out of the outputs (`config.json`, `"outputs": {"source_text": false}`).
 
@@ -36,7 +37,7 @@ source text are left out of the outputs (`config.json`, `"outputs": {"source_tex
 | `run_all.py`, `src/` | The analysis, one module per step (corpus parsing, screening, adjudication, herb features and index, sensitivity analyses, formula composition, acupoints, figures). |
 | `run_d2.py`, `src/d2.py` | Analysis of the independent rating of a stratified random sample. |
 | `config.json` | Threshold, weights, caps, seeds and file locations. |
-| `data/` | Curated input tables: screening dictionary with term weights and Rome IV domains, exclusion terms, herb alias dictionary, Latin names, efficacy axes and trigger terms, axis–pattern map, pattern terms, meridian sources, acupoint names with WHO codes, guideline acupoints. |
+| `data/` | Curated input tables: screening dictionary with term weights and Rome V domains, exclusion terms, herb alias dictionary, Latin names, efficacy axes and trigger terms, axis–pattern map, pattern terms, meridian sources, acupoint names with WHO codes, guideline acupoints. |
 | `data/old_analysis/` | Decisions and herb ranking of the analysis in the originally submitted manuscript, used for the comparison with the submitted ranking. |
 | `decisions/adjudication_record.csv` | The decision for every candidate unit (below). |
 | `d2/` | Sampling design (`design.json`), rating key (`rating_key.csv`: rating id, unit, stratum, inclusion probability) and the include/exclude answers of the two raters (`ratings.csv`; 포함 include, 제외 exclude, blank no answer), with the first author's label for the units on which they disagreed (`author_label`). The primary estimates use the units on which the raters agreed. Precision and recall are stratum-weighted (Horvitz–Thompson) estimates for the clinical chapters, and `d2_summary.json` gives them for each step of the procedure under `steps` (screen: keyword score at or above the threshold; filter: also not removed by the exclusion filter; final: included after adjudication) and with the author's labels under `with_author_labels`. |
@@ -68,7 +69,7 @@ and tier 2 otherwise.
 |---|---|
 | `01_screening_all_clinical_units.csv` | Screening score, matched terms and filter result of every unit of the clinical chapters |
 | `02_adjudication_status.csv` | Decision, tier, bowel habit and patterns of every candidate unit |
-| `03_final_passages.csv` | Included units with their keyword-level Rome IV elements |
+| `03_final_passages.csv` | Included units with their keyword-level Rome elements |
 | `04_herb_index.csv` | The six components, the weighted contributions and the score of every herb |
 | `05`–`07` | Requisite designations, tonify and reduce lists, meridian source of every herb |
 | `10`–`19` | Weight scenarios, random weight draws, ablation, worst-case pairwise margins, design-matrix diagnostics, component contributions, alternative rules and corpora, enrichment |

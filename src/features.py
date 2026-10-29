@@ -67,7 +67,9 @@ def load_axes(cfg):
 
 
 NEG_CONTEXT = re.compile(r"(令人|使人|致人)$")
-FALSE_CONTEXTS = {"利水": ("利水穀",)}      # 利水穀道 = passage of water and grain, not diuresis
+FALSE_CONTEXTS = {"利水": ("利水穀",),      # 利水穀道 = passage of water and grain, not diuresis
+                  # 寒熱 = chills and fever (除寒熱往來 in the entry of 柴胡), not dispelling cold
+                  "除寒": ("除寒熱",), "去寒": ("去寒熱",), "散寒": ("散寒熱",), "逐寒": ("逐寒熱",)}
 
 
 def code_axes(text, axes):
@@ -196,7 +198,7 @@ def herb_features(final_units, all_units, lex, masker, dictionary, cfg=None, req
     cfg = cfg or load_config()
     requisite_rule = requisite_rule or cfg["index"]["requisite_rule"]
     tonify_rule = tonify_rule or cfg["index"]["tonify_rule"]
-    meridian_priority = meridian_priority or ["textbook", "KIOM monograph", "textbook (original analysis record)", "Donguibogam"]
+    meridian_priority = meridian_priority or ["KIOM monograph", "ChP 2020", "Donguibogam"]
     occ, docf = {}, {}
     for u in final_units:
         ms = unit_mentions(u, lex, masker)
@@ -281,9 +283,7 @@ def herb_features(final_units, all_units, lex, masker, dictionary, cfg=None, req
         if msource == "none":
             flags.append("no meridian information in the declared sources (M = 0)")
         elif msource == "Donguibogam":
-            flags.append("meridians from the Donguibogam 入經 statement (no textbook or KIOM value)")
-        elif msource == "textbook (original analysis record)":
-            flags.append("本草學 value as recorded in the original analysis (page not recorded)")
+            flags.append("meridians from the Donguibogam 入經 statement (no KIOM or ChP value)")
         row["flags"] = "; ".join(flags)
         rows.append(row)
     info = dict(fmax=fmax, designations=desigs, selected=sel, tonify=sorted(ton), tonify_lists=tr,

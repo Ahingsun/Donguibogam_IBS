@@ -1,10 +1,10 @@
 [screen] clinical units 8969; candidates 415; filter-excluded 107; to adjudicate 308
 [adjudication] decisions read from the adjudication record (decisions/adjudication_record.csv)
-[adjudication] 840 decision units from 308 passages (126 divided by source citation); included 144 units (tier 1 32, tier 2 112) from 86 passages; FINAL (all decisions from the adjudication record)
-[passages] keyword-level Rome IV elements in final passages: {'link_terms': 7, 'pain_terms': 25, 'stool_terms': 116, 'chronicity': 10}
+[adjudication] 840 decision units from 308 passages (126 divided by source citation); included 144 units (tier 1 33, tier 2 111) from 86 passages; FINAL (all decisions from the adjudication record)
+[passages] keyword-level Rome elements in final passages: {'link_terms': 7, 'pain_terms': 25, 'stool_terms': 116, 'chronicity': 10}
 [herbs] universe 63 herbs (>= 2 final passages); f_max 15.0 (tier-2 mentions weighted 0.5)
 [herbs] top 10: 厚朴 84.3, 茯苓 83.8, 白朮 81.6, 木香 80.8, 肉豆蔲 80.3, 芍藥 77.5, 麻仁 69.8, 砂仁 68.2, 訶子 67.5, 蒼朮 66.9
-[herbs] meridian source: Donguibogam 3, KIOM monograph 36, none 7, textbook (original analysis record) 17
-[compare] submitted vs new, common herbs 46: Spearman 0.709
-[prescriptions] 109 formulas (50 recorded in, 59 recommended in IBS passages; +5 single-herb remedies); Spearman zero vs scored-only 0.699; dose-weighted available for 90, Spearman 0.716
-[acupoints] 39 points from 27 statements (11 point-mentions flagged)
+[herbs] meridian source: ChP 2020 17, Donguibogam 3, KIOM monograph 36, none 7
+[compare] submitted vs new, common herbs 46: Spearman 0.715
+[prescriptions] 109 formulas (50 recorded in, 59 recommended in IBS passages; +5 single-herb remedies); Spearman zero vs scored-only 0.697; dose-weighted available for 90, Spearman 0.718
+[acupoints] 27 points from 14 included statements of 28 extracted (0 point-mentions from statement decisions awaiting the researcher's review)

@@ -7,8 +7,8 @@ bowel_habit,C,5,小麻仁丸,recorded in an IBS passage,51.05,51.05,51.05,44,내
 bowel_habit,C,6,潤麻丸,recommended in an IBS passage,51.05,51.05,51.05,45,내경편_권04:1197,40
 bowel_habit,C,7,通神散,recommended in an IBS passage,50.62,50.62,47.28,46,내경편_권04:1220,40
 bowel_habit,C,8,黃芪湯,recorded in an IBS passage,50.21,50.21,50.21,47,내경편_권04:1238,40
-bowel_habit,C,9,推氣丸,recorded in an IBS passage,49.02,49.02,,49,내경편_권04:1284,40
-bowel_habit,C,10,五仁丸,recommended in an IBS passage,48.24,48.24,54.84,53,내경편_권04:1202,40
+bowel_habit,C,9,推氣丸,recorded in an IBS passage,49.02,49.02,,48,내경편_권04:1284,40
+bowel_habit,C,10,五仁丸,recommended in an IBS passage,48.24,48.24,54.84,51,내경편_권04:1202,40
 bowel_habit,D,1,固中丸,recommended in an IBS passage,73.59,73.59,73.59,1,내경편_권04:760,66
 bowel_habit,D,2,三白湯,recommended in an IBS passage,71.9,71.9,77.35,2,내경편_권04:616,66
 bowel_habit,D,3,實腸散,recorded in an IBS passage,71.26,71.26,72.33,3,내경편_권03:905,66
@@ -20,6 +20,6 @@ bowel_habit,D,8,三神丸,recorded in an IBS passage,69.6,69.6,61.75,8,내경편
 bowel_habit,D,9,加味四君子湯,recorded in an IBS passage,65.32,65.32,65.32,9,내경편_권04:693,66
 bowel_habit,D,10,苓朮湯,recommended in an IBS passage,65.27,65.27,65.27,10,잡병편_권01:98,66
 bowel_habit,M,1,理中湯,recorded in an IBS passage,56.27,56.27,57.93,35,잡병편_권02:1016,4
-bowel_habit,M,2,大柴胡湯,recommended in an IBS passage,49.81,49.81,49.03,48,잡병편_권02:1217,4
+bowel_habit,M,2,大柴胡湯,recommended in an IBS passage,47.59,47.59,45.08,53,잡병편_권02:1217,4
 bowel_habit,M,3,調胃承氣湯,recommended in an IBS passage,36.18,36.18,37.68,79,잡병편_권02:1214,4
 bowel_habit,M,4,加味小建中湯,recommended in an IBS passage,35.52,47.36,55.84,83,외형편_권03:200,4

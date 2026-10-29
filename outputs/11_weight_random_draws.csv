@@ -1,2 +1,2 @@
 ﻿analysis,spearman_median,spearman_p05,spearman_min,top10_retained_median,top10_retained_min
-1000 random ±50% draws (seed 20261004),0.994,0.982,0.95,9.0,8
+1000 random ±50% draws (seed 20261004),0.994,0.981,0.948,9.0,8

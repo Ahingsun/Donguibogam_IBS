@@ -468,7 +468,7 @@
 외형편_권04:1279,외형편_권04:1279,False,adjudication record,C,auto,,제외,,E-1,,,,,,,
 잡병편_권01:93,잡병편_권01:93,False,adjudication record,U,auto,,제외,,E-5,,,,,,,
 잡병편_권01:97,잡병편_권01:97,True,adjudication record,D,adjudication record,,포함,"I-1b, I-1d, I-2",,N,Y,Y,N,설사,,2
-잡병편_권01:105,잡병편_권01:105,True,adjudication record,D,adjudication record,,포함,"I-1b, I-1d, I-2",,N,Y,Y,N,설사,,2
+잡병편_권01:105,잡병편_권01:105,True,adjudication record,D,adjudication record,,포함,"I-1a, I-1b, I-1d, I-2",,Y,Y,Y,N,설사,,1
 잡병편_권01:323#1,잡병편_권01:323,False,adjudication record,U,auto,,제외,,E-5,,,,,,,
 잡병편_권01:323#2,잡병편_권01:323,False,adjudication record,U,auto,,제외,,E-5,,,,,,,
 잡병편_권01:323#3,잡병편_권01:323,False,adjudication record,U,auto,,제외,,E-5,,,,,,,

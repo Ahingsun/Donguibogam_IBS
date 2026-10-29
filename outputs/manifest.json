@@ -1,6 +1,6 @@
 {
  "version": "R1-2026-10-04",
- "run_started": "2026-10-27T22:32:08",
+ "run_started": "2026-10-29T02:05:33",
  "status": "FINAL (all decisions from the adjudication record)",
  "python": "3.14.7",
  "platform": "Windows-11-10.0.26200-SP0",
@@ -59,6 +59,7 @@
  "inputs": {
   "config.json": "e6fc96d15c116590ee6f3808c0d01b0d",
   "data\\acupoint_names.csv": "de25600ee6d38304515971c14a8ae661",
+  "data\\acupoint_statement_decisions.csv": "ba77cfa339e76a3db90762ab8e192eb5",
   "data\\axis_pattern_map.csv": "77584dc12a57a028a4a54b48a834aa3d",
   "data\\cpg_acupoints.csv": "267123a2de7ffd73dc6470683295ee61",
   "data\\efficacy_axes.csv": "d0a6fcc6f943e7eb9a8e82d77a4e949b",
@@ -66,31 +67,31 @@
   "data\\herb_aliases.csv": "b4747a2c245d73b3537e2536c40d2ebd",
   "data\\herb_latin_names.csv": "14d089d786d4771265e937ef0bf1c345",
   "data\\latin_names.csv": "a11f0f62670e1f31e6d5745136cf53d7",
-  "data\\meridian_sources.csv": "2f563cff5371a79055034f105ee05ead",
+  "data\\meridian_sources.csv": "dbb64972f35fff338757a172ead09237",
   "data\\pattern_terms.csv": "e3e258744ba16c4406000d1f83c6ffc4",
   "data\\screening_dictionary.csv": "c3235d7d275389b111a5668770e35466",
   "data\\old_analysis\\herb_intrinsic_scores_original.csv": "31aebad23d7dcb13a6ec568c471f40d2",
   "data\\old_analysis\\old_decisions.csv": "c0c732291036466f12717620a273eb1f",
   "data\\old_analysis\\table4_herb_ranking_original.csv": "2aff28d9bb1f02b5269d990a31b9e7ca",
-  "decisions/adjudication_record.csv": "a4854260ba6abc2d16fc06a848f97f71"
+  "decisions/adjudication_record.csv": "dd079bf447aa9498878e8797c3a7248a"
  },
  "code": {
-  "src\\acupoints.py": "8556230b4a303c764b35a49f962a09c7",
+  "src\\acupoints.py": "6aa51bd08247e11f113a9cfcb78f4bee",
   "src\\adjudication.py": "5c0f4b2db4fb908a5822ac3459c2b3e2",
   "src\\annotate.py": "bc9506d76cc20c62ef4ac830a32ed20e",
   "src\\common.py": "8ec328697e2d5fcafa70d3ab3c067c68",
   "src\\composition.py": "6aaa7d55f9154b8c8777acb86f18b58d",
   "src\\corpus.py": "9207ac1f0e6a2846d2eb0dce139891f3",
   "src\\d2.py": "157d62a243c0eec93cb50b92e3a39820",
-  "src\\features.py": "4491d56ce0296971537e75cdf944baea",
-  "src\\figures.py": "5a69f7087f4aedfb8cfe81c59b1088cc",
+  "src\\features.py": "7a9601a0025c28223f2fbc756da5b91c",
+  "src\\figures.py": "daed77e0118324d21b3cb0f9dcd2b8d2",
   "src\\lexicon.py": "0610a3864c3d83cfb2c2af105c1449c9",
   "src\\prescriptions.py": "8047ce44280bb17eccba5d7029862a86",
   "src\\screen.py": "447408c75da5f091e613954bd2a27a42",
   "src\\sensitivity.py": "c5dec1ea8b0d38b70f1b510f24dc08b4",
   "src\\statements.py": "e87d8872b379c4a1b6cc7e9b2ac56657",
   "src\\stats.py": "b53c5b0c65d269b356b87f1c51a2fe23",
-  "run_all.py": "c3e9a9cfe6d6ab4920fef3ff4bc3e077"
+  "run_all.py": "a00d94c3708bc4c962fad93ad4a64643"
  },
  "seeds": {
   "random_seeds": [
@@ -122,9 +123,9 @@
   "adjudicated_units": 840,
   "included": 144,
   "included_passages": 86,
-  "tier1": 32,
-  "tier2": 112,
-  "tier1_passages": 25,
+  "tier1": 33,
+  "tier2": 111,
+  "tier1_passages": 26,
   "tier2_weight": 0.5,
   "note": ""
  }

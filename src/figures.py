@@ -48,7 +48,7 @@ def flow(counts, out):
          (f"\n({div} divided at source citations:\n{n_units} adjudication units)" if div else "")),
         (mx, 0.28, f"Included by content adjudication\nn = {counts['included']}" +
          (f" units\n(from {counts['included_passages']} passages)" if div else "") +
-         (f"\ntier 1 (Rome IV core) {counts['tier1']}, tier 2 {counts['tier2']}" if "tier1" in counts else "")),
+         (f"\ntier 1 (Rome V core) {counts['tier1']}, tier 2 {counts['tier2']}" if "tier1" in counts else "")),
     ]
     side = [
         (sx, 0.82, f"Score < {counts['threshold']}\nn = {counts['units'] - counts['candidates']:,}"),

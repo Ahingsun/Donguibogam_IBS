@@ -145,9 +145,10 @@ def main():
     by = "from the adjudication record" if dec_from == "record" else "by the researcher"
     status = f"FINAL (all decisions {by}{accepted})" if n_prov == 0 else \
         f"PROVISIONAL ({n_prov} of {len(dids)} decisions not yet entered or reviewed by the researcher{accepted})"
-    # tiers (researcher decision 2026-10-10): tier 1 = Rome IV core, pain written together with at least two of
-    # relation to defecation, change in frequency, change in form (R4 pain Y and frequency or form Y); tier 2 = a
-    # change in bowel habit without such pain (the guideline's diarrhoea and constipation categories)
+    # tiers (researcher decision 2026-10-10, Rome V since 2026-10-29): tier 1 = Rome V core, abdominal pain or
+    # discomfort written together with at least two of relation to defecation, change in frequency, change in form
+    # (R4 pain Y and frequency or form Y; no unit records a discomfort other than bloating, which Rome V keeps apart,
+    # so the tiers are those of Rome IV as well); tier 2 = a change in bowel habit without such pain or discomfort
     yes = lambda r, k: r.get(k, "").strip().upper() == "Y"
     for r in decision_rows:
         r["tier"] = ("1" if yes(r, "R4_배변연관통증") and (yes(r, "R4_빈도변화") or yes(r, "R4_형태변화")) else "2") \
@@ -180,7 +181,7 @@ def main():
                         decision_source=d["decision_source"], text=u["text"]))
     write_csv("outputs/03_final_passages.csv", strip(sup))
     elem = {k: sum(1 for r in sup if r[k]) for k in ("link_terms", "pain_terms", "stool_terms", "chronicity")}
-    log("[passages] keyword-level Rome IV elements in final passages:", elem)
+    log("[passages] keyword-level Rome elements in final passages:", elem)
 
     # ---------------------------------------------------------------- 5 herbs and index
     lex = load_aliases(cfg)
@@ -237,7 +238,7 @@ def main():
         run_alt(f"requisite rule: {rule}", requisite_rule=rule, universe=universe)
     for rule in ("large_intestine_tonify_or_reduce", "large_intestine_plus_spleen_tonify", "none"):
         run_alt(f"tonify rule: {rule}", tonify_rule=rule, universe=universe)
-    run_alt("meridians: Donguibogam first", meridian_priority=["Donguibogam", "textbook", "KIOM monograph"], universe=universe)
+    run_alt("meridians: Donguibogam first", meridian_priority=["Donguibogam", "KIOM monograph", "ChP 2020"], universe=universe)
     run_alt("meridians: Donguibogam only", meridian_priority=["Donguibogam"], universe=universe)
     dys = {u["unit_id"] for u in FU if "痢" in u["norm"]}
     run_alt(f"corpus: dysentery passages removed ({len(dys)} passages)",
@@ -245,10 +246,10 @@ def main():
     hi = {u["unit_id"] for u in FU if sby[u["unit_id"]]["score"] >= 4}
     run_alt(f"corpus: passages with score >= 4 only ({len(hi)} of {len(FU)})",
             ids=[d for d in final if statements.parent_of(d) in hi], universe=universe)
-    # tiers (2026-10-10): no differentiation (tier 2 counts 1), and tier 1 only (the Rome IV core definition)
+    # tiers (2026-10-10): no differentiation (tier 2 counts 1), and tier 1 only (the Rome V core definition)
     run_alt("tiers: tier-2 mentions weighted 1 (no differentiation)", weight2=1.0, universe=universe)
     t1_ids = [d for d in final if tier[d] == 1]
-    run_alt(f"tiers: tier 1 only, Rome IV core ({len(t1_ids)} units)", ids=t1_ids, universe=universe)
+    run_alt(f"tiers: tier 1 only, Rome V core ({len(t1_ids)} units)", ids=t1_ids, universe=universe)
     # dysentery rule A (2026-10-10): add back the chronic or functional-looking dysentery units whose own text names
     # no blood or pus (weighted as tier 2)
     fin = set(final)
@@ -257,6 +258,24 @@ def main():
                    and not re.search("[血膿赤]", statements.unit_of(d, byid)["norm"])]
     run_alt(f"corpus: + chronic dysentery units without blood or pus ({len(chronic_dys)} units)",
             ids=[d for d in dids if d in fin or d in chronic_dys], universe=universe)
+    # independent rating (2026-10-27): the units both raters judged relevant that the procedure did not include, added
+    # to the corpus as they are and weighted by the inverse sampling probability of their passage, so that a sampled
+    # unit stands for the units of its stratum. Added units have no tier and count at the tier-2 weight. Uses the
+    # rating results of run_d2.py analyze (d2/d2_per_unit.csv); skipped before the rating has been analysed.
+    per_unit = os.path.join(cfg["d2"]["folder"], "d2_per_unit.csv")
+    if os.path.exists(path(per_unit)):
+        missed = [r for r in read_csv(per_unit) if r["reference"] == "포함" and r["author"] != "포함"]
+        mids = [r["unit_id"] for r in missed]
+        label = f"corpus: + units both raters judged relevant but not included ({len(mids)} units)"
+        run_alt(label, ids=list(final) + mids, universe=universe)
+        inv = {r["unit_id"]: 1.0 / float(r["prob"]) for r in missed}
+        occ = occ_of(final) + [(statements.unit_of(d, byid), w2 * inv[d]) for d in mids]
+        r2, _ = herb_features(statements.reduced_units(list(final) + mids, byid), U, lex, mk, D, cfg, occ_units=occ,
+                              universe=universe)
+        s2 = score(r2, w0)
+        label_w = label.replace("not included", "not included, weighted by inverse sampling probability")
+        alt.append(sens.compare(base, s2, label_w))
+        rank_table[label_w] = {r["herb"]: r["rank"] for r in s2}
     for kmin in (1, 3):
         r2, _ = herb_features(FU, U, lex, mk, D, cfg, occ_units=occ_base,
                               universe=sorted(h for h, n in info["passage_counts"].items() if n >= kmin and lex["kind"].get(h) == "herb"))
@@ -329,11 +348,16 @@ def main():
     for r in acu:       # statements numbered within their unit, so that rows stay distinct without the text
         seen = nums.setdefault(r["unit_id"], {})
         r["statement_no"] = seen.setdefault(r["statement"], len(seen) + 1)
+    # every statement judged by the adjudication criteria of the units (researcher decision 2026-10-28)
+    acupoints.apply_decisions(acu, acupoints.load_decisions(), dec)
     write_csv("outputs/40_acupoint_statements.csv", strip(acu, ("statement", "indication")))
     acs = acupoints.summarize(acu, read_csv("data/cpg_acupoints.csv"))
     write_csv("outputs/41_acupoints_summary.csv", strip(acs, ("indications",)))
-    log(f"[acupoints] {len(acs)} points from {len({(r['unit_id'], r['statement']) for r in acu})} statements "
-        f"({sum(1 for r in acu if r['flags'])} point-mentions flagged)")
+    inc = {(r["unit_id"], r["statement"]) for r in acu if r["decision"] == "included"}
+    log(f"[acupoints] {len(acs)} points from {len(inc)} included statements of "
+        f"{len({(r['unit_id'], r['statement']) for r in acu})} extracted "
+        f"({sum(1 for r in acu if not r['reviewed'] and r['decision'])} point-mentions from statement decisions "
+        f"awaiting the researcher's review)")
 
     # ---------------------------------------------------------------- 9 figures
     counts = dict(units=n_clin, threshold=cfg["screening"]["threshold"], candidates=len(cand) + len(filt),

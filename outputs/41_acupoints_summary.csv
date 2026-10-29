@@ -1,40 +1,28 @@
-﻿point,who_code,kind,n_statements,n_diarrhea_dysentery,n_constipation,sources,in_cpg
-關元,CV4,standard,5,4,0,大便/鍼灸法 《得效》; 大便/鍼灸法 《東垣》; 大便/鍼灸法 《綱目》; 腹/鍼灸法 《靈樞》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
-神闕,CV8,standard,4,4,0,大便/鍼灸法 《得效》; 大便/鍼灸法 《資生》; 大便/鍼灸法 《綱目》,"R7 moxibustion (C/Low, p.169)"
-陰陵泉,SP9,standard,4,3,0,大便/鍼灸法 《綱目》; 腹/鍼灸法 《靈樞》,"R6 acupuncture (B/Moderate, p.155)"
-中脘,CV12,standard,3,1,0,大便/鍼灸法 《綱目》; 腹/鍼灸法 《靈樞》; 內傷/鍼灸法 《資生》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
-氣海,CV6,standard,3,2,1,大便/鍼灸法 《丹溪》; 大便/鍼灸法 《得效》; 大便/鍼灸法 《綱目》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
-照海,KI6,standard,3,0,2,大便/鍼灸法 《綱目》; 腹/鍼灸法 《綱目》,
-天樞,ST25,standard,3,2,0,大便/鍼灸法 《丹溪》; 大便/鍼灸法 《綱目》; 腹/鍼灸法 《靈樞》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
-足三里,ST36,standard,3,1,1,大便/鍼灸法 《綱目》; 腹/鍼灸法 《靈樞》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
-支溝,TE6,standard,3,0,1,大便/鍼灸法 《綱目》; 腹/鍼灸法 《綱目》; 腹/鍼灸法 《靈樞》,
-獨陰,EX-LE11,extra,2,0,0,腹/鍼灸法 《得效》; 鍼灸/別穴,
-合谷,LI4,standard,2,1,0,大便/鍼灸法 《東垣》; 大便/鍼灸法 《綱目》,
-太衝,LR3,standard,2,1,0,大便/鍼灸法 《綱目》; 腹/鍼灸法 《靈樞》,"R6 acupuncture (B/Moderate, p.155)"
-大都,SP2,standard,2,1,1,大便/鍼灸法 《綱目》,
-太白,SP3,standard,2,0,2,大便/鍼灸法 《綱目》,
-公孫,SP4,standard,2,0,0,腹/鍼灸法 《靈樞》,
-三陰交,SP6,standard,2,1,0,大便/鍼灸法 《資生》; 腹/鍼灸法 《靈樞》,"R6 acupuncture (B/Moderate, p.155)"
-環岡,,donguibogam_extra,2,0,2,大便/鍼灸法 《綱目》; 鍼灸/別穴,
-脾腧,BL20,standard,1,1,0,大便/鍼灸法 《得效》,"R7 moxibustion (C/Low, p.169)"
-承山,BL57,standard,1,0,1,大便/鍼灸法 《綱目》,
-崑崙,BL60,standard,1,0,1,大便/鍼灸法 《綱目》,
-巨闕,CV14,standard,1,0,0,腹/鍼灸法 《綱目》,
-中極,CV3,standard,1,1,0,大便/鍼灸法 《綱目》,
-大椎,GV14,standard,1,1,0,大便/鍼灸法 《易老》,
-百會,GV20,standard,1,1,0,大便/鍼灸法 《醫鑑》,"R6 acupuncture (B/Moderate, p.155)"
-湧泉,KI1,standard,1,0,1,大便/鍼灸法 《綱目》,
-陰谷,KI10,standard,1,0,0,腹/鍼灸法 《靈樞》,
-然谷,KI2,standard,1,1,0,大便/鍼灸法 《綱目》,
-太鍾,KI4,standard,1,0,1,大便/鍼灸法 《綱目》,
-三間,LI3,standard,1,0,1,大便/鍼灸法 《綱目》,
-章門,LR13,standard,1,0,1,大便/鍼灸法 《綱目》,
-內關,PC6,standard,1,0,0,腹/鍼灸法 《綱目》,
-商丘,SP5,standard,1,1,0,大便/鍼灸法 《綱目》,
-水道,ST28,standard,1,0,1,大便/鍼灸法 《綱目》,
-上巨虛,ST37,standard,1,1,0,大便/鍼灸法 《綱目》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
-外關,TE5,standard,1,0,0,大便/鍼灸法 《東垣》,
-窮谷,,unidentified,1,1,0,大便/鍼灸法 《東垣》,
-腸遶,,donguibogam_extra,1,0,1,鍼灸/別穴,
-足三間,,unidentified,1,0,0,腹/鍼灸法 《綱目》,
-長谷,,donguibogam_extra,1,1,0,鍼灸/別穴,
+﻿point,who_code,kind,n_statements,n_tier1,n_diarrhea_dysentery,n_constipation,sources,in_cpg
+神闕,CV8,standard,4,1,4,0,大便/鍼灸法 《得效》; 大便/鍼灸法 《資生》; 腹/鍼灸法 《綱目》,"R7 moxibustion (C/Low, p.169)"
+關元,CV4,standard,2,0,2,0,大便/鍼灸法 《得效》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
+氣海,CV6,standard,2,0,1,1,大便/鍼灸法 《丹溪》; 大便/鍼灸法 《綱目》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
+照海,KI6,standard,2,0,0,2,大便/鍼灸法 《綱目》,
+太白,SP3,standard,2,0,0,2,大便/鍼灸法 《綱目》,
+環岡,,donguibogam_extra,2,0,0,2,大便/鍼灸法 《綱目》; 鍼灸/別穴,
+脾腧,BL20,standard,1,0,1,0,大便/鍼灸法 《得效》,"R7 moxibustion (C/Low, p.169)"
+承山,BL57,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+崑崙,BL60,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+大椎,GV14,standard,1,0,1,0,大便/鍼灸法 《易老》,
+百會,GV20,standard,1,0,1,0,大便/鍼灸法 《醫鑑》,"R6 acupuncture (B/Moderate, p.155)"
+湧泉,KI1,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+然谷,KI2,standard,1,0,1,0,大便/鍼灸法 《綱目》,
+太鍾,KI4,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+三間,LI3,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+章門,LR13,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+太衝,LR3,standard,1,0,1,0,大便/鍼灸法 《綱目》,"R6 acupuncture (B/Moderate, p.155)"
+大都,SP2,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+三陰交,SP6,standard,1,0,1,0,大便/鍼灸法 《資生》,"R6 acupuncture (B/Moderate, p.155)"
+陰陵泉,SP9,standard,1,0,1,0,大便/鍼灸法 《綱目》,"R6 acupuncture (B/Moderate, p.155)"
+天樞,ST25,standard,1,0,1,0,大便/鍼灸法 《丹溪》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
+水道,ST28,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+足三里,ST36,standard,1,0,0,1,大便/鍼灸法 《綱目》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
+上巨虛,ST37,standard,1,0,1,0,大便/鍼灸法 《綱目》,"R6 acupuncture (B/Moderate, p.155); R7 moxibustion (C/Low, p.169)"
+支溝,TE6,standard,1,0,0,1,大便/鍼灸法 《綱目》,
+腸遶,,donguibogam_extra,1,0,0,1,鍼灸/別穴,
+長谷,,donguibogam_extra,1,0,1,0,鍼灸/別穴,
