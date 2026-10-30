@@ -52,7 +52,7 @@ def sha256(p):
 
 
 # Variant characters -> one form. Applied to corpus text and to every dictionary/lexicon term
-# alike, so that a term matches all spellings found in the KIOM digitization.
+# alike, so that a term matches all spellings found in the Donguibogam text files.
 CHAR_MAP = {
     "飧": "飱", "飡": "飱",   # 飱泄
     "祕": "秘",               # 便秘
@@ -77,7 +77,7 @@ CHAR_MAP = {
     "麯": "麴",
     "鸎": "罌", "甖": "罌",   # 罌粟殼
     "兎": "菟",               # 兎絲子
-    "䓀": "桔", "莄": "梗",   # 䓀莄 = 桔梗 (122 times in the KIOM text; 甘䓀湯 = 甘桔湯)
+    "䓀": "桔", "莄": "梗",   # 䓀莄 = 桔梗 (122 times in the Donguibogam text; 甘䓀湯 = 甘桔湯)
 }
 BIGRAM_MAP = {"藏毒": "臟毒", "彭脹": "膨脹"}
 

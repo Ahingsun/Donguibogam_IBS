@@ -2,19 +2,11 @@
 
 Code and data for the revised manuscript "A traditional medicine text-based algorithm for prioritizing candidate
 herbs and prescriptions for Irritable Bowel Syndrome". Two scripts reproduce every result of the article from the
-source text of Donguibogam and the tables in this repository.
+Donguibogam text files and the tables in this repository.
 
-## Source text (not included)
+## Source text
 
-The text of Donguibogam is not redistributed here. It is digitized and distributed by the Korea Institute of
-Oriental Medicine through the Korean Medicine Classics Database (https://www.mediclassics.kr), under the terms of
-use of that database. The analysis reads the 23 volume files of that distribution (UTF-8, one tag and a tab at
-the start of each line: AA volume, BB section, CC subsection, DD heading, ZZ body text, DP/EP/CP prescription,
-SS content, DH/CH materia medica, DK acupoint). The files used here were downloaded on 2026-03-04. Their names
-and checksums are listed in `source_texts/README.md`, and every run records the checksums of the files it read in
-`outputs/manifest.json`.
-
-Put the 23 files in `source_texts/`, or set the environment variable `DONGUIBOGAM_TEXT_DIR` to their folder.
+Put the Donguibogam text files (.txt) in `source_texts/`.
 
 ## Running
 
@@ -27,8 +19,9 @@ python run_all.py            # screening, adjudication record, herb index, sensi
 `run_d2.py analyze` writes `d2/d2_summary.json` and `d2/d2_per_unit.csv`. `run_all.py` rewrites `outputs/`, takes about
 a minute and reads `d2/d2_per_unit.csv` for the two sensitivity corpora that add the units both raters judged
 relevant, so it runs second. The files in this repository were produced with Python 3.14.7, NumPy 2.5.3, openpyxl 3.1.5 and
-Matplotlib 3.11.2, and running the two scripts on the same 23 files reproduces them. Columns that would quote the
-source text are left out of the outputs (`config.json`, `"outputs": {"source_text": false}`).
+Matplotlib 3.11.2, and running the two scripts on the text files listed in `source_texts/README.md` reproduces them.
+Columns that would quote the source text are left out of the outputs (`config.json`,
+`"outputs": {"source_text": false}`).
 
 ## Contents
 

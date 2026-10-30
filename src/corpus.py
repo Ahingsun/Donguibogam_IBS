@@ -1,4 +1,4 @@
-"""Step 0. Parse the 23 KIOM Donguibogam text files into analysis units.
+"""Step 0. Parse the 23 Donguibogam text files into analysis units.
 
 Unit rules
 ----------

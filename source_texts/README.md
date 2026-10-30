@@ -1,7 +1,6 @@
 # Source files
 
-The 23 volume files of Donguibogam go here. They are not part of this repository (see the main README). These are
-the files used for the outputs in this repository, downloaded on 2026-03-04.
+Put the Donguibogam text files (.txt) here. These are the files used for the outputs in this repository.
 
 | File | MD5 | SHA-256 |
 |---|---|---|
