@@ -13,7 +13,8 @@ Rules
   dose form a mixture (union of compositions, doses not combined). Formula names in a clause containing
   名 (一名X, 名曰X) are alternative names, not base formulas.
 * Cross-reference entries. An entry that names no herb before 方見X (e.g. 平胃散 in the Internal Damage
-  section, 方見五藏) takes the composition of the entry of the same name in section X.
+  section, 方見五藏) takes the composition of the entry of the same name in section X, and an entry that
+  names no herb and says which formula it is (三和湯: 卽氣門三和散也) takes that formula's composition.
 * Herb named in the formula name. A herb whose name is part of the formula name and that is mentioned
   in the entry is a constituent even when it is added during preparation (阿膠 in 黃連阿膠元).
 * Recognition. Constituents are matched with the curated alias list and, in addition, with every
@@ -21,12 +22,14 @@ Rules
   list is counted (as unscored, kind "other") rather than silently dropped.
 * Processing notes. Text in parentheses (小字 notes such as 黃連(以吳茱萸煎水浸炒)) names processing
   agents, not constituents, and is ignored.
-* Doses. A dose written right after a herb, or after a group of herbs (各), is converted to 分.
+* Doses. A dose written right after a herb, or after a group of herbs (各), is converted to 分, reading on
+  over the smaller units that follow (一兩二錢半 = 125分). Alternative names (一名麻仁丸) are masked with the
+  formula names, so they are not read as constituents.
 """
 import re
 
 from common import norm
-from lexicon import DOSE_RX, _dose_value, is_size
+from lexicon import DOSE_RX, _dose_value, dose_value_from, is_size
 
 PREP_RX = re.compile(r"(?:^|(?<=[\s.,，。、)）》]))右\s*(?:[一二三四五六七八九十]+\s*味|"
                      r"[剉銼爲細搗㕮麤麄粗同件藥和入將末作以水各等幷並共用取酒醋蜜煎煮擣硏炒焙])")
@@ -113,7 +116,7 @@ class Composer:
             between = seg[pos:mm.start()]
             d = DOSE_RX.search(between)
             if d and pending:
-                dose = _dose_value(d)
+                dose = dose_value_from(between, d)
                 items.extend((h, dose, op) for h, op in pending)
                 pending = []
             op = None
@@ -122,8 +125,9 @@ class Composer:
                 op = prev[-1] if prev else None
             pending.append((self.canon[mm.group(0)], op))
             pos = mm.end()
-        d = DOSE_RX.search(seg[pos:pos + 12])
-        dose = _dose_value(d) if d else None
+        tail = seg[pos:pos + 12]
+        d = DOSE_RX.search(tail)
+        dose = dose_value_from(tail, d) if d else None
         items.extend((h, dose, op) for h, op in pending)
         return items
 
@@ -183,6 +187,17 @@ class Composer:
                 out = (comp, f"cross-reference to {tgt['BB']} ({tgt['unit_id']})")
                 self.cache[uid] = out
                 return out
+        # identity entry: names no herb and says which formula it is (卽氣門三和散也)
+        if self.frx and not self.rx.search(_mask_notes(self.masker(seg))):
+            for fm in self.frx.finditer(seg):
+                jx = re.search(r"卽\s*(?:([^\s,.，。ㆍ]{1,4}?)門)?\s*$", seg[max(0, fm.start() - 8):fm.start()])
+                if jx and fm.group(0) != own:
+                    tgt = self.resolve(fm.group(0), u, jx.group(1))
+                    if tgt is not None and tgt["unit_id"] not in stack:
+                        comp, _ = self.composition(tgt, stack)
+                        out = (comp, f"cross-reference to {tgt['BB']} ({tgt['unit_id']})")
+                        self.cache[uid] = out
+                        return out
         refs = self._base_refs(seg, own)
         comp = []
         if refs:
@@ -230,7 +245,7 @@ class Composer:
                 if i >= 0:
                     tail = text[i + len(a):i + len(a) + 10].lstrip(PROC_CHARS + " ()（）")
                     d = DOSE_RX.match(tail)
-                    comp.append((c, _dose_value(d) if d else None))
+                    comp.append((c, dose_value_from(tail, d) if d else None))
                     have.add(c)
                     note.append(f"named herb {c}")
         if not comp and u["name"] and own in self.canon:          # single-herb remedy

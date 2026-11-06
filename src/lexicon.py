@@ -6,8 +6,9 @@ Counting rules
   and 靑橘皮 is not read as 橘皮. Aliases are at least two characters long (single-character
   mentions such as 薑 or 棗 are not counted, in line with the keyword rule).
 * Names of prescriptions (DP/EP/CP names of three or more characters ending in a formula
-  suffix, e.g. 湯 散 丸) are masked before counting, so herbs inside formula names
-  (木香檳榔丸) are not counted.
+  suffix, e.g. 湯 散 丸 飮子) are masked before counting, so herbs inside formula names
+  (木香檳榔丸) are not counted. So are formula names that have no entry of their own: alternative
+  names (一名麻仁丸, 名曰X) and names cited with a cross-reference (桂枝麻黃湯方見寒門).
 * For a prescription unit, the unit name is counted only when the name itself is a herb
   (single-herb remedies, 單方).
 * A herb name used to give a size (丸麻子大, 如雞子大, 大如雞子) is not a mention.
@@ -37,14 +38,44 @@ def load_aliases(cfg=None):
     return dict(alias2canon=alias2canon, kind=kind, meta=meta, rx=rx)
 
 
-def formula_names(units, cfg=None):
+STOP = set("以用宜與及並服投加合或次後先再兼可")
+CJK = re.compile(r"[㐀-鿿]")
+
+
+def cited_name(t, k, suf, longest=8):
+    """Formula name written right before position k (方見): read back over Chinese characters and stop at
+    punctuation or a joining word (以 用 宜 與 ...), at most `longest` characters."""
+    j = k
+    while j > 0 and t[j - 1] == " ":
+        j -= 1
+    i = j
+    while i > 0 and j - i < longest and CJK.match(t[i - 1]) and t[i - 1] not in STOP:
+        i -= 1
+    n = t[i:j]
+    return n if len(n) >= 3 and n.endswith(suf) else ""
+
+
+def formula_names(units, cfg=None, cited=False):
+    """Names of the prescription entries. cited=True adds the names that have no entry of their own (alternative
+    names, names cited with 方見); these may carry a joining word in front (又, 取) and serve only to mask herb
+    names, not to link or compose formulas."""
     cfg = cfg or load_config()
     suf = tuple(cfg["herbs"]["formula_name_suffixes"])
+    alt = "|".join(map(re.escape, sorted(suf, key=len, reverse=True)))
+    syn_rx = re.compile(r"(?:一名|名曰|又名|亦名)\s*([㐀-鿿]{2,8}?(?:" + alt + "))")
     names = set()
     for u in units:
         if u["type"] == "presc" and u["name"]:
             n = norm(re.sub(r"\s+", "", u["name"]))
             if len(n) >= 3 and n.endswith(suf):
+                names.add(n)
+    for u in (units if cited else []):      # names without an entry: alternative names and cited formulas
+        t = u.get("norm_text") or norm(u.get("text", ""))
+        for m in syn_rx.finditer(t):
+            names.add(m.group(1))
+        for m in re.finditer("方見", t):
+            n = cited_name(t, m.start(), suf)
+            if n:
                 names.add(n)
     return sorted(names, key=len, reverse=True)
 
@@ -109,3 +140,19 @@ def _dose_value(m):
     qty = chinese_number(m.group(2)) + (0.5 if m.group(4) else 0)
     unit = m.group(3)
     return qty * UNIT_FEN[unit] if unit in UNIT_FEN else None
+
+
+def dose_value_from(text, m):
+    """Dose of match m in text, read on over the smaller units that follow it (一兩二錢半 = 125分)."""
+    v = _dose_value(m)
+    if v is None or m.group(4):
+        return v
+    end, last = m.end(), UNIT_FEN[m.group(3)]
+    while True:
+        n = DOSE_RX.match(text, end)
+        if not n or n.group(1) or n.group(3) not in UNIT_FEN or UNIT_FEN[n.group(3)] >= last:
+            return v
+        v += _dose_value(n)
+        end, last = n.end(), UNIT_FEN[n.group(3)]
+        if n.group(4):
+            return v

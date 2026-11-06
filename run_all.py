@@ -185,7 +185,7 @@ def main():
 
     # ---------------------------------------------------------------- 5 herbs and index
     lex = load_aliases(cfg)
-    mk = Masker(formula_names(U, cfg))
+    mk = Masker(formula_names(U, cfg, cited=True))      # herb counting also masks names without an entry
     occ_base = occ_of(final)
     rows, info = herb_features(FU, U, lex, mk, D, cfg, occ_units=occ_base)
     w0 = cfg["index"]["weights"]

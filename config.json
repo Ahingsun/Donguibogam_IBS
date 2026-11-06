@@ -22,6 +22,7 @@
     "aliases": "data/herb_aliases.csv",
     "universe_min_passages": 2,
     "formula_name_suffixes": [
+      "飮子",
       "湯",
       "散",
       "丸",

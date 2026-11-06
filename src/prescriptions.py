@@ -29,6 +29,8 @@ def _name(u):
 
 
 HINT_RX = re.compile(r"\s*方見(上|下|[^\s,.，。ㆍ]{1,4}?)(?:門|(?=[\s,.，。ㆍ]))")
+SYNONYM_BEFORE = re.compile(r"(?:一名|名曰|名爲|又名|亦名|名)\s*$")
+IDENTITY_BEFORE = re.compile(r"卽\s*(?:[^\s,.，。ㆍ]{1,4}?門)?\s*$")
 
 
 def referenced(final_units, formula_list, composer):
@@ -39,9 +41,17 @@ def referenced(final_units, formula_list, composer):
     refs = {}
     for u in final_units:
         own = _name(u) if u["type"] == "presc" else ""
-        for m in rx.finditer(u["norm_text"]):
+        t = u["norm_text"]
+        # an entry that names no herb and says which formula it is (三和湯: 卽氣門三和散也) takes that formula's
+        # composition (composition.py) and does not recommend it
+        identity = u["type"] == "presc" and not composer.rx.search(composer.masker(t))
+        for m in rx.finditer(t):
             n = m.group(0)
             if n == own or n not in composer.entries:
+                continue
+            # a name in a clause with 名 is an alternative name (得效方, 名木香散), not a recommendation
+            clause = t[max(t.rfind(p, 0, m.start()) for p in ".,，。、") + 1:m.start()]
+            if SYNONYM_BEFORE.search(clause) or (identity and IDENTITY_BEFORE.search(clause)):
                 continue
             xm = HINT_RX.match(u["norm_text"][m.end():m.end() + 8])
             pick = composer.resolve(n, u, xm.group(1)) if xm else None
@@ -99,8 +109,8 @@ def prescription_table(final_units, all_units, composer, herb_scores, annotation
             constituents="|".join(f"{h}" + (f"({d:g}分)" if d is not None else "") for h, d in comp),
             unscored="|".join(h for h, _ in comp if h not in herb_scores),
             composition_note=how,
-            score_zero=round(s_zero, 2), score_scored=round(s_scored, 2),
-            score_dose=round(s_dose, 2) if s_dose != "" else "",
+            score_zero=round(s_zero, 4), score_scored=round(s_scored, 4),
+            score_dose=round(s_dose, 4) if s_dose != "" else "",
             bowel_habit="|".join(habits), patterns="|".join(pats),
             kind="single-herb remedy" if single else "formula", in_final_passages="yes" if uid in final_ids else "",
             from_tier1_unit="yes" if core else ""))
